@@ -53,5 +53,4 @@ const BackendAPI: string = process.env.BASE_URL || ""
 
 const apiClient: ApiClient = new ApiClient(BackendAPI)
 
-
 export default apiClient;
