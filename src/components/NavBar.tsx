@@ -1,8 +1,8 @@
 import Link from 'next/link'
-// import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 export const NavBar = () => {
-  // const { t } = useTranslation();
+  const t = useTranslations();
     return (
       <>
         <nav className="w-full py-4 bg-blue-800 shadow">
@@ -11,20 +11,17 @@ export const NavBar = () => {
               <ul className="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
                 <li>
                   <Link className="hover:text-gray-200 hover:underline px-4" href="/">
-                    {/* {t('home')} */}
-                    homge
+                    {t('home')}
                   </Link>
                 </li>
                 <li>
                   <Link className="hover:text-gray-200 hover:underline px-4" href="/">
-                    {/* {t('about')} */}
-                    about
+                    {t('about')}
                   </Link>
                 </li>
                 <li>
                   <Link className="hover:text-gray-200 hover:underline px-4" href="new/1">
-                    {/* {t('latestArticles')} */}
-                    latest articles
+                    {t('latestArticles')}
                   </Link>
                 </li>
               </ul>

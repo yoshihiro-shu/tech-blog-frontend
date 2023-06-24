@@ -1,8 +1,8 @@
 import Link from 'next/link'
-// import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 export const Footer = () => {
-  // const { t } = useTranslation();
+  const t = useTranslations();
   return (
       <footer className="w-full border-t bg-white pb-12">
       <div
@@ -27,8 +27,7 @@ export const Footer = () => {
           <Link href="/" className="uppercase px-3">Contact Us</Link>
         </div>
         <div className="uppercase pb-6">
-          {/* {t('copyright')} */}
-          copyright
+          {t('copyright')}
         </div>
       </div>
     </footer>
