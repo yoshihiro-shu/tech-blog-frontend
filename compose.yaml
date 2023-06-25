@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  draft-front:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    command: ["npm", "run", "dev"]
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app/
+    env_file:
+      - .env
+    tty: true
+    working_dir: /app
+    networks:
+      - draft-frontend-network
+
+networks:
+  draft-frontend-network:
+    driver: bridge
+    external: true
