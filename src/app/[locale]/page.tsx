@@ -19,7 +19,7 @@ type TopPageData = {
   pager: Pager,
 }
 
-export default async () => {
+export default async function Index() {
     let articles: Article[] = [];
     // TODO useSWR
     const res = await apiClient.Get<TopPageData>("/top");;

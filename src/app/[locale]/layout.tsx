@@ -29,7 +29,7 @@ export async function generateMetadata({
   };
 }
 
-export default ({children, params}: Props) => {
+export default function LocaleLayout({children, params}: Props){
   const locale = useLocale();
 
   // Show a 404 error if the user requests an unknown locale
