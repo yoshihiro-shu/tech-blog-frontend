@@ -1,5 +1,5 @@
 // import './globals.css'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 
 import {useLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
@@ -12,7 +12,7 @@ import { TopicNav } from '@/components/TopicNav'
 import { SideBar} from '@/components/SideBar'
 import { Footer } from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 type Props = {
   children: ReactNode;
@@ -39,7 +39,9 @@ export default function LocaleLayout({children, params}: Props){
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      {/* TODO FIX */}
+      {/* <body className={inter.className}> */}
+      <body>
         <NavBar />
         <Header />
         <TopicNav />
