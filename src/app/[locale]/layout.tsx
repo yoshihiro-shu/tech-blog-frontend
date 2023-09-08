@@ -1,8 +1,6 @@
 // import './globals.css'
 // import { Inter } from 'next/font/google'
 
-import {useLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
 import {ReactNode} from 'react';
 import {getTranslator} from 'next-intl/server';
 
@@ -29,14 +27,7 @@ export async function generateMetadata({
   };
 }
 
-export default function LocaleLayout({children, params}: Props){
-  const locale = useLocale();
-
-  // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
-    notFound();
-  }
-
+export default async function LocaleLayout({children, params: {locale}}: Props){
   return (
     <html lang={locale}>
       {/* TODO FIX */}
