@@ -1,11 +1,11 @@
 import React from 'react';
 
-import apiClient from '../../../server/client';
+import apiClient from '@/server/client';
 
-import Article from '../../../server/types/article'
-import Pager from '../../../server/types/pager';
+import Article from '@/server/types/article'
+import Pager from '@/server/types/pager';
 
-import { ArticleBox } from '@/components/ArticleBox'
+import { ArticleBox } from '@/src/components/ArticleBox'
 
 // Add some delay here.
 // const fetcher = (url: string) =>

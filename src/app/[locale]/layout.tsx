@@ -4,11 +4,11 @@
 import {ReactNode} from 'react';
 import {getTranslator} from 'next-intl/server';
 
-import { NavBar} from '@/components/NavBar'
-import { Header } from '@/components/Header'
-import { TopicNav } from '@/components/TopicNav'
-import { SideBar} from '@/components/SideBar'
-import { Footer } from '@/components/Footer'
+import { NavBar} from '@/src/components/NavBar'
+import { Header } from '@/src/components/Header'
+import { TopicNav } from '@/src/components/TopicNav'
+import { SideBar} from '@/src/components/SideBar'
+import { Footer } from '@/src/components/Footer'
 
 // const inter = Inter({ subsets: ['latin'] })
 
