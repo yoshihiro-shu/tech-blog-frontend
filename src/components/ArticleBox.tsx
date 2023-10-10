@@ -11,7 +11,7 @@ const displayArticleContent: number = 50
 
 export const  ArticleBox = ({ article }: Props) => {
     // const articleDetailPath: string = generatePath("/articles/:id", {id: article.id.toString() })
-    const articleDetailPath: string = "/articles/" + article.id
+    const articleDetailPath: string = "/article/" + article.id
 
     return (
       <article className="flex flex-col shadow my-4">
