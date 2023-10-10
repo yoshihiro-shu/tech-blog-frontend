@@ -2,14 +2,7 @@
 import APIResponse from "./types";
 
 class ApiClient {
-  backendAPI: string
-
-  constructor(backendAPI: string) {
-    this.backendAPI = backendAPI;
-  }
-
-  public async Get<T>(api: string): Promise<APIResponse<T>> {
-    const endpoint: string = this.backendAPI + api
+  public async Get<T>(endpoint: string): Promise<APIResponse<T>> {
     return await fetch(endpoint, {
       method: 'GET',
       // For Set-Cookie
@@ -28,8 +21,7 @@ class ApiClient {
     })
   }
 
-  public async Post<T>(api: string, data: { [key: string]: any }): Promise<APIResponse<T>> {
-    const endpoint: string = this.backendAPI + api
+  public async Post<T>(endpoint: string, data: { [key: string]: any }): Promise<APIResponse<T>> {
     return fetch(endpoint, {
       method: 'POST',
       mode: 'cors',
@@ -49,8 +41,8 @@ class ApiClient {
   }
 }
 
-const BackendAPI: string = process.env.BASE_URL || ""
+// const BackendAPI: string = process.env.BASE_URL || ""
 
-const apiClient: ApiClient = new ApiClient(BackendAPI)
+const apiClient: ApiClient = new ApiClient()
 
 export default apiClient;

@@ -1,11 +1,10 @@
-import React from 'react';
-
 import apiClient from '@/server/client';
 
 import Article from '@/server/types/article'
 import Pager from '@/server/types/pager';
 
 import { ArticleBox } from '@/src/components/ArticleBox'
+import configs from '@/config/index';
 
 // Add some delay here.
 // const fetcher = (url: string) =>
@@ -22,7 +21,7 @@ type TopPageData = {
 export default async function Index() {
     let articles: Article[] = [];
     // TODO useSWR
-    const res = await apiClient.Get<TopPageData>("/top");;
+    const res = await apiClient.Get<TopPageData>(configs.BackendAPI + "/top");;
     articles = res.data.articles
     return (
         <section className="w-full md:w-2/3 flex flex-col items-center px-3">
