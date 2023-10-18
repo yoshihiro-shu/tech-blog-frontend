@@ -13,8 +13,6 @@ const AritcleDetail = async() => {
   const parmas = await useParams();
   const id = parmas.id || "1";
 
-  console.log("parmas", parmas);
-
   const baseUrl = process.env.BASE_URL || ""
   const res = await apiClient.Get<Article>(getArticleDetailApi(configs.BackendAPI, id));
   const article: Article = res.data;
