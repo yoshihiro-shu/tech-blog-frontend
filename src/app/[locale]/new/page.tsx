@@ -1,6 +1,3 @@
-'use client';
-import { useParams } from 'next/navigation'
-
 import  { ArticleBox } from '@/src/components/ArticleBox';
 import Pagination from '@/src/components/Pager/Pagination'
 
@@ -18,9 +15,7 @@ type NewArticlesData = {
   }
 
 const NewArticles = async() => {
-  const parmas = await useParams();
-  const page = parmas.page || "1";
-
+  const page = "1";
   const res = await apiClient.Get<NewArticlesData>(configs.BackendAPI + getNewArticlesApi(page));
 
   const articles: Article[] = res.data.articles;
