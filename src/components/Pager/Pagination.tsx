@@ -9,7 +9,7 @@ type Props = {pager: Pager}
 
 const displayPagerRange: number = 3
 
-function Pagination({ pager }: Props){
+const Pagination = ({ pager }: Props) => {
   const startPage: number = pager.currentPage - 1 || 1
   const prevPage: number = pager.currentPage - 1
   const nextPage: number = startPage + displayPagerRange + 1
@@ -17,6 +17,7 @@ function Pagination({ pager }: Props){
   const isNextPage: boolean = nextPage < pager.lastPage
 
   let pagerRange: number[] = Array.from({length: displayPagerRange}, (_, n) => ( startPage+n ))
+  pagerRange = pagerRange.filter(number => number <= pager.lastPage)
 
   return (
     <div className="flex items-center py-8">
