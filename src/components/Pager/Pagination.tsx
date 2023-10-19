@@ -5,11 +5,14 @@ import NextPager from "./NextPager";
 
 import Pager from "@/server/types/pager";
 
-type Props = {pager: Pager}
+type Props = {
+    pager: Pager,
+    getLink: (slug: number) => string
+}
 
 const displayPagerRange: number = 3
 
-const Pagination = ({ pager }: Props) => {
+const Pagination = ({ pager, getLink }: Props) => {
   const startPage: number = pager.currentPage - 1 || 1
   const prevPage: number = pager.currentPage - 1
   const nextPage: number = startPage + displayPagerRange + 1
@@ -21,13 +24,13 @@ const Pagination = ({ pager }: Props) => {
 
   return (
     <div className="flex items-center py-8">
-      {isPrevPage && <PrevPager page={prevPage} />}
+      {isPrevPage && <PrevPager page={prevPage} getLink={getLink} />}
       {/* TODO fix */}
       {pagerRange.map(pr => (pr === pager.currentPage)
-        ? <CurrentPager key={pr} page={pr}/>
-        : <NormalPager key={pr} page={pr} />)
+        ? <CurrentPager key={pr} page={pr} getLink={getLink}/>
+        : <NormalPager key={pr} page={pr} getLink={getLink}/>)
       }
-      {isNextPage && <NextPager page={nextPage} />}
+      {isNextPage && <NextPager page={nextPage} getLink={getLink}/>}
     </div>
   )
 }

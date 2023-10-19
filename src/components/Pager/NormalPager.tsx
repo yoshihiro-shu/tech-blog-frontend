@@ -1,15 +1,14 @@
 import Link from 'next/link'
 
-import { usePathname } from 'next/navigation'
+type Props = {
+    page: number,
+    getLink: (slug: number) => string
+}
 
-type Props = {page: number}
-
-const NextPager: React.FC<Props> = ({ page }: Props) => {
-  const basePath = usePathname() as string
-  const next: string = basePath + '/' + page.toString()
+const NextPager: React.FC<Props> = ({ page, getLink }: Props) => {
   return (
-    <Link href={next} className="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3">
-      Next <i className="fas fa-arrow-right ml-2" />
+    <Link href={getLink(page)} className="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3">
+      { page } <i className="fas fa-arrow-right ml-2" />
     </Link>
   )
 }

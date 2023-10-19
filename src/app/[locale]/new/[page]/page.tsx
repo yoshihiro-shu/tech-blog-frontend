@@ -1,5 +1,3 @@
-import { GetServerSideProps, NextPage } from 'next';
-
 import  { ArticleBox } from '@/src/components/ArticleBox';
 import Pagination from '@/src/components/Pager/Pagination'
 
@@ -26,6 +24,10 @@ const NewArticles = async({
   const articles: Article[] = res.data.articles;
   const pager: Pager = res.data.pager;
 
+  const getLink = (slug: number): string => {
+    return `/new/${slug}`
+  }
+
   return (
     <section className="w-full md:w-2/3 flex flex-col items-center px-3">
       {articles.map(article => (
@@ -35,9 +37,10 @@ const NewArticles = async({
         />
       ))
       }
-    {/* <Pagination
+    <Pagination
       pager={pager}
-    /> */}
+      getLink={getLink}
+    />
   </section>
   )
 }
