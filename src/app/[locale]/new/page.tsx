@@ -30,9 +30,9 @@ const NewArticles = async() => {
         />
       ))
       }
-    <Pagination
+    {/* <Pagination
       pager={pager}
-    />
+    /> */}
   </section>
   )
 }

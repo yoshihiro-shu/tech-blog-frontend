@@ -1,5 +1,4 @@
-'use client';
-import { useParams } from 'next/navigation'
+import { GetServerSideProps, NextPage } from 'next';
 
 import  { ArticleBox } from '@/src/components/ArticleBox';
 import Pagination from '@/src/components/Pager/Pagination'
@@ -17,10 +16,11 @@ type NewArticlesData = {
     pager: Pager,
   }
 
-const NewArticles = async() => {
-  const parmas = await useParams();
-  const page = parmas.page || "1";
-
+const NewArticles = async({
+    params: { page },
+  }: {
+    params: { page: string }
+  }) => {
   const res = await apiClient.Get<NewArticlesData>(configs.BackendAPI + getNewArticlesApi(page));
 
   const articles: Article[] = res.data.articles;
@@ -35,9 +35,9 @@ const NewArticles = async() => {
         />
       ))
       }
-    <Pagination
+    {/* <Pagination
       pager={pager}
-    />
+    /> */}
   </section>
   )
 }
