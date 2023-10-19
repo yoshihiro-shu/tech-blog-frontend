@@ -20,7 +20,7 @@ export const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:text-gray-200 hover:underline px-4" href="/new">
+                  <Link className="hover:text-gray-200 hover:underline px-4" href="/new/1">
                     {t('latestArticles')}
                   </Link>
                 </li>
