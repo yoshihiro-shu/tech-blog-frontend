@@ -31,7 +31,7 @@ const ArticleDetail = async({
         Published on <>{ displayTime(article?.createdAt) }</>
       </p>
         <Link href="/" className="text-blue-700 text-sm font-bold uppercase pb-4">{ article?.category?.name }</Link>
-        <p className="text-3xl font-bold hover:text-gray-700 pb-4">{ article?.title }</p>
+        <div className="text-4xl font-bold hover:text-gray-700 pb-4">{ article?.title }</div>
         {article.tags.map((tag) => <Link href="/" key={tag.id} >#{tag.name}</Link>)}
         <div className="prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
