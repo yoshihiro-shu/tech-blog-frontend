@@ -26,7 +26,11 @@ const NewArticles = async({
 
   const getLink = (slug: number): string => {
     // TODO Page RoutingのPlugin的なものを作る
-    return `/article/${slug}`
+    return `/new/${slug}`
+  }
+
+  if (articles.length === 0) {
+    return <div>Articles not found</div>
   }
 
   return (

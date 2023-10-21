@@ -1,8 +1,22 @@
 {
-  "title": "Tech Blog ja",
-  "description": "Lorem Ipsum Dolor Sit Amet",
-  "home": "HOME",
-  "about": "ABOUT",
-  "latestArticles": "新着記事",
-  "copyright": "© MYBLOG.COM"
+  "Header": {
+    "title": "テックブログ",
+    "description": "〜 学んだことを随時更新しています。 〜"
+  },
+  "Navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "latestArticles": "新着記事"
+  },
+  "Footer": {
+    "copyright": "© yoshihiro-shu.com"
+  },
+  "TopicNav": {
+    "Ajaile": "アジャイル",
+    "Bussiness": "ビジネス",
+    "Backend": "バックエンド",
+    "Frontend": "フロントエンド",
+    "Infrastructure": "インフラ",
+    "Marketing": "マーケティング"
+  }
 }

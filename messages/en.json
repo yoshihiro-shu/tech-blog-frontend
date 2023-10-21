@@ -1,8 +1,22 @@
 {
-  "title": "Tech Blog en",
-  "description": "Lorem Ipsum Dolor Sit Amet",
-  "home": "HOME",
-  "about": "ABOUT",
-  "latestArticles": "Latest",
-  "copyright": "© MYBLOG.COM"
+  "Header": {
+    "title": "Tech Blog",
+    "description": "Lorem Ipsum Dolor Sit Amet"
+  },
+  "Navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "latestArticles": "Latest"
+  },
+  "Footer": {
+    "copyright": "© yoshihiro-shu.com"
+  },
+  "TopicNav": {
+    "Ajaile": "Ajaile",
+    "Bussiness": "Bussiness",
+    "Backend": "Backend",
+    "Frontend": "Frontend",
+    "Infrastructure": "Infrastructure",
+    "Marketing": "Marketing"
+  }
 }

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
 export const NavBar = () => {
-  const t = useTranslations();
+  const t = useTranslations("Navbar");
     return (
       <>
         <nav className="w-full py-4 bg-blue-800 shadow">
