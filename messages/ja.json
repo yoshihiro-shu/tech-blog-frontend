@@ -8,7 +8,9 @@
     "about": "ABOUT",
     "latestArticles": "新着記事"
   },
-  "copyright": "© MYBLOG.COM",
+  "Footer": {
+    "copyright": "© yoshihiro-shu.com"
+  },
   "TopicNav": {
     "Ajaile": "アジャイル",
     "Bussiness": "ビジネス",

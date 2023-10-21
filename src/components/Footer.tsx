@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
 export const Footer = () => {
-  const t = useTranslations();
+  const t = useTranslations("Footer");
   return (
       <footer className="w-full border-t bg-white pb-12">
       <div
