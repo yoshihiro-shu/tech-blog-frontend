@@ -9,6 +9,7 @@ export function Header() {
           <Link href="/" className="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl">
             {t('title')}
           </Link>
+          <br/>
           <p className="text-lg text-gray-600">
             {t('description')}
           </p>
