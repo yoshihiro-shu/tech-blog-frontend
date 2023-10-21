@@ -4,5 +4,13 @@
   "home": "HOME",
   "about": "ABOUT",
   "latestArticles": "新着記事",
-  "copyright": "© MYBLOG.COM"
+  "copyright": "© MYBLOG.COM",
+  "TopicNav": {
+    "Ajaile": "アジャイル",
+    "Bussiness": "ビジネス",
+    "Backend": "バックエンド",
+    "Frontend": "フロントエンド",
+    "Infrastructure": "インフラ",
+    "Marketing": "マーケティング"
+  }
 }

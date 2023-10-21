@@ -4,5 +4,13 @@
   "home": "HOME",
   "about": "ABOUT",
   "latestArticles": "Latest",
-  "copyright": "© MYBLOG.COM"
+  "copyright": "© MYBLOG.COM",
+  "TopicNav": {
+    "Ajaile": "Ajaile",
+    "Bussiness": "Bussiness",
+    "Backend": "Backend",
+    "Frontend": "Frontend",
+    "Infrastructure": "Infrastructure",
+    "Marketing": "Marketing"
+  }
 }
