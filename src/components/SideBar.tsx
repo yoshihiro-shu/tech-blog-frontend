@@ -1,12 +1,22 @@
 import Link from 'next/link'
 import Image from 'next/image';
 
+import githubIcon from '@/public/github-mark.svg';
+import facebookIcon from '@/public/facebook-icon.svg';
+import twitterIcon from '@/public/twitter-icon.svg';
+import gmailIcon from '@/public/gmail-icon.svg';
+import linkedinIcon from '@/public/linkedin-icon.svg';
+import threadsIcon from '@/public/threads-icon.svg';
+import instagramIcon from '@/public/instagram-icon.svg';
+import dockerIcon from '@/public/docker-icon.svg';
+import qiitaIcon from '@/public/qiita-icon.svg';
+
 // import LoginForm from "./Login";
 
 export const SideBar = () => {
     return (
         <aside className="w-full md:w-1/3 flex flex-col items-center px-3">
-          <div className="w-full bg-white shadow flex flex-col my-4 p-6">
+          {/* <div className="w-full bg-white shadow flex flex-col my-4 p-6"> */}
             {/* <p className="text-xl font-semibold pb-5">
               About Us
             </p>
@@ -17,25 +27,43 @@ export const SideBar = () => {
               Login
             </Link> */}
             {/* <LoginForm /> */}
-          </div>
+          {/* </div> */}
 
           <div className="w-full bg-white shadow flex flex-col my-4 p-6">
             <p className="text-xl font-semibold pb-5">
-              Instagram
+              Contacts
             </p>
             <div className="grid grid-cols-3 gap-3">
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8" alt="" width={500} height={500}/>
-              <Image className="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9" alt="" width={500} height={500}/>
+            <Link href="https://www.instagram.com/yoshihiro_shu/">
+                <Image className="hover:opacity-75" src={instagramIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://www.facebook.com/profile.php?id=100008324476833">
+                <Image className="hover:opacity-75" src={facebookIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://twitter.com/iamyoshitter">
+                <Image className="hover:opacity-75" src={twitterIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://www.linkedin.com/in/%E7%BE%A9%E5%AE%8F-%E6%9C%B1-696a4423a/">
+                <Image className="hover:opacity-75" src={linkedinIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="yoihongzhu0321@gmail.com">
+                <Image className="hover:opacity-75" src={gmailIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://www.threads.net/@yoshihiro_shu">
+                <Image className="hover:opacity-75" src={threadsIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://github.com/yoshihiro-shu">
+                <Image className="hover:opacity-75" src={githubIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://hub.docker.com/u/yoshi429">
+                <Image className="hover:opacity-75" src={dockerIcon} alt="" width={500} height={500}/>
+              </Link>
+              <Link href="https://qiita.com/yoshihiro-shu">
+                <Image className="hover:opacity-75" src={qiitaIcon} alt="" width={500} height={500}/>
+              </Link>
             </div>
             <Link href="/" className="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
-              <i className="fab fa-instagram mr-2" /> Follow @dgrzyb
+              <i className="fab fa-instagram mr-2" /> 連絡する
             </Link>
           </div>
         </aside>
