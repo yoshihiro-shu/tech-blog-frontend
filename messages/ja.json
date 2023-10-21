@@ -1,11 +1,13 @@
 {
   "Header": {
     "title": "テックブログ",
-    "description": "学んだことを随時更新しています。"
+    "description": "〜学んだことを随時更新しています。〜"
   },
-  "home": "HOME",
-  "about": "ABOUT",
-  "latestArticles": "新着記事",
+  "Navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "latestArticles": "新着記事"
+  },
   "copyright": "© MYBLOG.COM",
   "TopicNav": {
     "Ajaile": "アジャイル",

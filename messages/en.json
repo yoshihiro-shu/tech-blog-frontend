@@ -3,9 +3,11 @@
     "title": "Tech Blog",
     "description": "Lorem Ipsum Dolor Sit Amet"
   },
-  "home": "HOME",
-  "about": "ABOUT",
-  "latestArticles": "Latest",
+  "Navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "latestArticles": "Latest"
+  },
   "copyright": "© MYBLOG.COM",
   "TopicNav": {
     "Ajaile": "Ajaile",
