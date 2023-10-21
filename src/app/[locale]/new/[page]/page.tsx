@@ -25,7 +25,8 @@ const NewArticles = async({
   const pager: Pager = res.data.pager;
 
   const getLink = (slug: number): string => {
-    return `/new/${slug}`
+    // TODO Page RoutingのPlugin的なものを作る
+    return `/article/${slug}`
   }
 
   return (
