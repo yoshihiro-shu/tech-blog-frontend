@@ -1,6 +1,8 @@
 {
-  "title": "Tech Blog ja",
-  "description": "Lorem Ipsum Dolor Sit Amet",
+  "Header": {
+    "title": "テックブログ",
+    "description": "学んだことを随時更新しています。"
+  },
   "home": "HOME",
   "about": "ABOUT",
   "latestArticles": "新着記事",

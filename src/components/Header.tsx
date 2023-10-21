@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
 export function Header() {
-  const t = useTranslations();
+  const t = useTranslations("Header");
     return (
       <header className="w-full container mx-auto">
         <div className="flex flex-col items-center py-12">
