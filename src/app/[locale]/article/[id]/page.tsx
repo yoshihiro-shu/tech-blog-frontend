@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { remark } from 'remark';
-import html from 'remark-html';
 
 import Article from '@/server/types/article';
 
 import apiClient from '@/server/client';
 import { getArticleDetailApi } from '@/server/api/articleDetail'
 import configs from '@/config/index';
+
+import { markdownToHtml } from '@/server/lib/markdown';
 
 const ArticleDetail = async({
     params: { id },
@@ -21,10 +21,7 @@ const ArticleDetail = async({
     return <div>Article not found</div>
   }
 
-  const processedContent = await remark()
-  .use(html)
-  .process(article.content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = await markdownToHtml(article.content);
 
   return (
     <article className="flex flex-col shadow my-4">
@@ -38,7 +35,7 @@ const ArticleDetail = async({
           By <Link href="/" className="font-semibold hover:text-gray-800">{ article?.user?.name }</Link>
           , Published on <>{ article?.createdAt }</>
         </p>
-        <p className="pb-6" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div className="prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
     </article>
   )

@@ -23,8 +23,8 @@ export const  ArticleBox = ({ article }: Props) => {
             By <Link href="/" className="font-semibold hover:text-gray-800">{ article.user?.name }</Link>
             , Published on <>{ article.createdAt }</>
           </p>
-          <p className="pb-6">{ article.content.slice(0, displayArticleContent) }</p>
-          <p className="uppercase text-gray-800 hover:text-black">Continue Reading <i className="fas fa-arrow-right"></i></p>
+          {/* <p className="pb-6">{ article.content.slice(0, displayArticleContent) }</p> */}
+          {/* <p className="uppercase text-gray-800 hover:text-black">Continue Reading <i className="fas fa-arrow-right"></i></p> */}
         </div>
       </article>
     )
