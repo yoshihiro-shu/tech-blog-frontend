@@ -8,6 +8,7 @@ import configs from '@/config/index';
 
 import { markdownToHtml } from '@/src/lib/markdown';
 import { displayTime } from '@/src/lib/markdown/datetime';
+// import TableOfContents from '@/src/components/TableOfContent';
 
 const ArticleDetail = async({
     params: { id },
@@ -17,15 +18,14 @@ const ArticleDetail = async({
   const res = await apiClient.Get<Article>(getArticleDetailApi(configs.BackendAPI, id));
 
   const article: Article = res.data;
-
   if (article === null) {
     return <div>Article not found</div>
   }
 
   const contentHtml = await markdownToHtml(article.content);
-
   return (
     <article className="flex flex-col shadow my-4">
+      {/* <TableOfContents content={article.content} /> */}
       <div className="bg-white flex flex-col justify-start p-6">
       <p className="text-sm pb-3">
         Published on <>{ displayTime(article?.createdAt) }</>

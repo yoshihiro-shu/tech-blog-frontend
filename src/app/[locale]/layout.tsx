@@ -14,7 +14,9 @@ import { Footer } from '@/src/components/Footer'
 
 type Props = {
   children: ReactNode;
-  params: {locale: string};
+  params: {
+    locale: string,
+  };
 };
 
 export async function generateMetadata({
