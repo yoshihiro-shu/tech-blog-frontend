@@ -1,9 +1,18 @@
-import {useTranslations} from 'next-intl';
+import fs from 'fs';
+import path from 'path';
 
-export default function AboutPage() {
-  const t = useTranslations('');
 
+import { markdownToHtml } from '@/src/lib/markdown';
+
+const AboutPage = async () => {
+  // TODO Get From Backend
+  const content = await fs.readFileSync(path.join('public', 'resume.md')).toString();
+  const contentHtml = await markdownToHtml(content);
   return (
-    <p>{t('title')}</p>
+    <>
+      <div className="prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+    </>
   );
 }
+
+export default AboutPage;
