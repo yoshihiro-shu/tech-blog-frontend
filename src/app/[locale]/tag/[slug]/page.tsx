@@ -9,24 +9,24 @@ import getTagArticlesApi from '@/server/api/tagArticles';
 import configs from '@/config/index';
 
 
-type NewArticlesData = {
+type ArticlesListPage = {
     articles: Article[],
     pager: Pager,
   }
 
-const NewArticles = async({
+const ArticlesByTag = async({
     params: { slug },
   }: {
     params: { slug: string }
   }) => {
-  const res = await apiClient.Get<NewArticlesData>(configs.BackendAPI + getTagArticlesApi(slug));
+  const res = await apiClient.Get<ArticlesListPage>(configs.BackendAPI + getTagArticlesApi(slug));
 
   const articles: Article[] = res.data.articles;
 //   const pager: Pager = res.data.pager;
 
 //   const getPagerLink = (slug: number): string => {
 //     // TODO Page RoutingのPlugin的なものを作る
-//     return `/tags/${slug}`
+//     return `/tag/${slug}`
 //   }
 
   if (articles.length === 0) {
@@ -50,4 +50,4 @@ const NewArticles = async({
   )
 }
 
-export default NewArticles;
+export default ArticlesByTag;
