@@ -9,8 +9,7 @@ type Props = { article: Article }
 
 export const  ArticleBox = ({ article }: Props) => {
     const articleDetailPath: string = "/article/" + article.id
-    const t = useTranslations("ArticleBox");
-
+    const t = useTranslations("Article");
     return (
       <article className="flex flex-col shadow my-4">
         <Link href={articleDetailPath} className="hover:opacity-75">
