@@ -34,7 +34,7 @@ export const SideBar = () => {
               Contacts
             </p>
             <div className="grid grid-cols-3 gap-3">
-            <Link href="https://www.instagram.com/yoshihiro_shu/">
+              <Link href="https://www.instagram.com/yoshihiro_shu/">
                 <Image className="hover:opacity-75" src={instagramIcon} alt="" width={500} height={500}/>
               </Link>
               <Link href="https://www.facebook.com/profile.php?id=100008324476833">
