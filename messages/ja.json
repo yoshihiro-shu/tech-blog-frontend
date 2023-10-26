@@ -18,5 +18,8 @@
     "Frontend": "フロントエンド",
     "Infrastructure": "インフラ",
     "Marketing": "マーケティング"
+  },
+  "ArticleBox": {
+    "LastModifiedAt": "最終更新日"
   }
 }

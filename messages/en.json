@@ -18,5 +18,8 @@
     "Frontend": "Frontend",
     "Infrastructure": "Infrastructure",
     "Marketing": "Marketing"
+  },
+  "ArticleBox": {
+    "LastModifiedAt": "Last Modified at"
   }
 }
