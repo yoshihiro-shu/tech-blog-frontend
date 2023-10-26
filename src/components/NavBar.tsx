@@ -15,8 +15,8 @@ export const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:text-gray-200 hover:underline px-4" href="/about">
-                    {t('about')}
+                  <Link className="hover:text-gray-200 hover:underline px-4" href="/profile">
+                    {t('profile')}
                   </Link>
                 </li>
                 <li>
