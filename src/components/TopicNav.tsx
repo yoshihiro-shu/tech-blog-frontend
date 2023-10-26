@@ -17,6 +17,7 @@ export const TopicNav = () => {
           <div className="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
           {/* archive/category/Android */}
             <Link href="/category/agile" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Ajaile')}</Link>
+            <Link href="/category/requirement-definition" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('RequirementDefinition')}</Link>
             <Link href="/category/bussiness" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Bussiness')}</Link>
             <Link href="/category/backend" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Backend')}</Link>
             <Link href="/category/frontend" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Frontend')}</Link>
