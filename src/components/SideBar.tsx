@@ -46,7 +46,7 @@ export const SideBar = () => {
               <Link href="https://www.linkedin.com/in/%E7%BE%A9%E5%AE%8F-%E6%9C%B1-696a4423a/">
                 <Image className="hover:opacity-75" src={linkedinIcon} alt="" width={500} height={500}/>
               </Link>
-              <Link href="yoihongzhu0321@gmail.com">
+              <Link href="mailto:yoihongzhu0321@gmail.com">
                 <Image className="hover:opacity-75" src={gmailIcon} alt="" width={500} height={500}/>
               </Link>
               <Link href="https://www.threads.net/@yoshihiro_shu">
