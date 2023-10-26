@@ -16,12 +16,12 @@ export const TopicNav = () => {
         <div className="w-full flex-grow sm:flex sm:items-center sm:w-auto">
           <div className="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
           {/* archive/category/Android */}
-            <Link href="/" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Ajaile')}</Link>
-            <Link href="/" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Bussiness')}</Link>
-            <Link href="/" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Backend')}</Link>
-            <Link href="/" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Frontend')}</Link>
-            <Link href="/" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Infrastructure')}</Link>
-            <Link href="/" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Marketing')}</Link>
+            <Link href="/category/agile" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Ajaile')}</Link>
+            <Link href="/category/bussiness" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Bussiness')}</Link>
+            <Link href="/category/backend" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Backend')}</Link>
+            <Link href="/category/frontend" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Frontend')}</Link>
+            <Link href="/category/infrastructure" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Infrastructure')}</Link>
+            <Link href="/category/marketing" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">{t('Marketing')}</Link>
           </div>
         </div>
       </nav>

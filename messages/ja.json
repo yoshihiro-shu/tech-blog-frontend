@@ -4,8 +4,8 @@
     "description": "〜 学んだことを随時更新しています。 〜"
   },
   "Navbar": {
-    "home": "HOME",
-    "about": "ABOUT",
+    "home": "ホーム",
+    "profile": "プロフィール",
     "latestArticles": "新着記事"
   },
   "Footer": {
@@ -18,5 +18,8 @@
     "Frontend": "フロントエンド",
     "Infrastructure": "インフラ",
     "Marketing": "マーケティング"
+  },
+  "Article": {
+    "LastModifiedAt": "最終更新日"
   }
 }
