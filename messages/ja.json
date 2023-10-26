@@ -17,7 +17,8 @@
     "Backend": "バックエンド",
     "Frontend": "フロントエンド",
     "Infrastructure": "インフラ",
-    "Marketing": "マーケティング"
+    "Marketing": "マーケティング",
+    "RequirementDefinition": "要件定義"
   },
   "Article": {
     "LastModifiedAt": "最終更新日"

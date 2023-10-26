@@ -17,7 +17,8 @@
     "Backend": "Backend",
     "Frontend": "Frontend",
     "Infrastructure": "Infrastructure",
-    "Marketing": "Marketing"
+    "Marketing": "Marketing",
+    "RequirementDefinition": "Requirement Definition"
   },
   "Article": {
     "LastModifiedAt": "Last Modified at"
