@@ -1,5 +1,5 @@
 import ArticleList from '@/src/components/Article/ArticleList'
-// import Pagination from '@/src/components/Pager/Pagination'
+import ErrorPage from '@/src/components/Error';
 
 import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
@@ -30,7 +30,7 @@ const ArticlesByTag = async({
 //   }
 
   if (articles.length === 0) {
-    return <div>Articles not found</div>
+    return <ErrorPage statusCode={404} errorMsg={`Tag '${slug}' Articles is Not Found`}/>
   }
 
   return (
