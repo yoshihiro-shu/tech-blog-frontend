@@ -24,7 +24,7 @@ export default async function Index() {
     const res = await apiClient.Get<TopPageData>(configs.BackendAPI + "/top");;
     articles = res.data.articles
     return (
-        <section className="w-full md:w-2/3 flex flex-col items-center px-3">
+        <section className="w-full md:w-3/4 flex flex-col items-center px-3">
           {articles.map(article => (
               <ArticleBox
                 key={article.id}
