@@ -13,7 +13,7 @@ export const  ArticleBox = ({ article }: Props) => {
     const articleDetailPath: string = "/article/" + article.id
 
     return (
-      <article className="flex flex-col shadow my-4 w-full border-2 border-indigo-600">
+      <article className="flex flex-col shadow my-4 border-2 border-indigo-600">
         <Link href={articleDetailPath} className="hover:opacity-75 w-full">
           <Thumbnail title={article?.title}/>
         </Link>

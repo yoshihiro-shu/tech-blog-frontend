@@ -11,11 +11,14 @@ export const Thumbnail = ({ title }: Props) => {
         </svg>
       `;
     };
-
     const svgToDataURL = (svgString: string) => {
       const encoded = encodeURIComponent(svgString);
       return `data:image/svg+xml,${encoded}`;
     };
+
+    if (title.length > 50) {
+      title = title.substring(0, 50) + "..."
+    }
 
     const svgString = createSVG(title);
     const dataURL = svgToDataURL(svgString);
