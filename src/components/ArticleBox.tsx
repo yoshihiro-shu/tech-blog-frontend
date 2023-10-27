@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl';
 
 import Article from '@/server/types/article'
 import { displayTime } from '@/src/lib/markdown/datetime';
+import { cagtegoryArticlesURL } from '@/src/lib/markdown/siteMap';
 import { Thumbnail } from '@/src/components/Thumbnail'
 
 type Props = { article: Article }
@@ -18,7 +18,7 @@ export const  ArticleBox = ({ article }: Props) => {
           <Thumbnail title={article?.title}/>
         </Link>
         <div className="bg-white flex flex-col justify-start p-6 border-t-2 border-indigo-600">
-          <Link href="/" className="text-blue-700 text-sm font-bold uppercase pb-4">{ article.category?.name }</Link>
+          <Link href={cagtegoryArticlesURL(article.category?.slug)} className="text-blue-700 text-sm font-bold uppercase pb-4">{ article.category?.name }</Link>
           <p className="text-sm pb-3">
             {t('LastModifiedAt')}  <>{ displayTime(article.createdAt) }</>
           </p>

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-
 type Props = { title: string }
 
 export const Thumbnail = ({ title }: Props) => {
