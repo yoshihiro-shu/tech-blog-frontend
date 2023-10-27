@@ -20,7 +20,7 @@ export const  ArticleBox = ({ article }: Props) => {
           <Link href={cagtegoryArticlesURL(article.category?.slug)} className="text-blue-700 text-sm font-bold pb-4">{ article.category?.name }</Link>
           <p className="text-sm flex justify-start">
             {article.tags.map(tag => (
-              <Link href={tagArticlesURL(tag.slug)} className='mr-2'>#{ tag.name }</Link>
+              <Link href={tagArticlesURL(tag.slug)} className='mr-2' key={tag.id}>#{ tag.name }</Link>
             ))}
           </p>
           <p className="text-sm flex justify-end">

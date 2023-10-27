@@ -1,5 +1,6 @@
 import ArticleList from '@/src/components/Article/ArticleList'
 import Article from '@/server/types/article';
+import ErrorPage from '@/src/components/Error';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
@@ -28,7 +29,7 @@ const ArticlesByCategory = async({
 //   }
 
   if (articles.length === 0) {
-    return <div>Articles not found</div>
+    return <ErrorPage statusCode={404} errorMsg={`Category '${slug}' Articles is Not Found`}/>
   }
 
   return (
