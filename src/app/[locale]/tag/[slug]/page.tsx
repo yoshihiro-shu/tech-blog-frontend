@@ -1,4 +1,4 @@
-import  { ArticleBox } from '@/src/components/ArticleBox';
+import  { ArticleBox } from '@/src/components/Article/ArticleBox';
 // import Pagination from '@/src/components/Pager/Pagination'
 
 import Article from '@/server/types/article';

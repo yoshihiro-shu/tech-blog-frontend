@@ -1,5 +1,5 @@
 import Article from '@/server/types/article';
-import ArticleDetail from '@/src/components/ArticleDetail';
+import ArticleDetail from '@/src/components/Article/ArticleDetail';
 import apiClient from '@/server/client';
 import { getArticleDetailApi } from '@/server/api/articleDetail'
 import configs from '@/config/index';

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import Article from '@/server/types/article'
 import { displayTime } from '@/src/lib/markdown/datetime';
 import { cagtegoryArticlesURL, tagArticlesURL } from '@/src/lib/markdown/siteMap';
-import { Thumbnail } from '@/src/components/Thumbnail'
+import { Thumbnail } from '@/src/components/Article/Thumbnail'
 
 type Props = { article: Article }
 

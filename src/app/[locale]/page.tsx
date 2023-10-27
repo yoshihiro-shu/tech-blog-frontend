@@ -3,7 +3,7 @@ import apiClient from '@/server/client';
 import Article from '@/server/types/article'
 import Pager from '@/server/types/pager';
 
-import { ArticleBox } from '@/src/components/ArticleBox'
+import { ArticleBox } from '@/src/components/Article/ArticleBox'
 import configs from '@/config/index';
 
 // Add some delay here.
