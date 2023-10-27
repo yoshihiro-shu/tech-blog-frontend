@@ -21,12 +21,9 @@ export const Footer = () => {
       </div>
       <div className="w-full container mx-auto flex flex-col items-center">
         <div className="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
-          <Link href="/" className="uppercase px-3">About Us</Link>
-          <Link href="/" className="uppercase px-3">Privacy Policy</Link>
-          <Link href="/" className="uppercase px-3">Terms & Conditions</Link>
-          <Link href="/" className="uppercase px-3">Contact Us</Link>
+          <Link href="/privacy" className="uppercase px-3">Privacy Policy</Link>
         </div>
-        <div className="uppercase pb-6">
+        <div className="pb-6">
           {t('copyright')}
         </div>
       </div>
