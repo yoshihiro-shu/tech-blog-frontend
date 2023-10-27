@@ -1,6 +1,4 @@
-import  { ArticleBox } from '@/src/components/Article/ArticleBox';
-import Pagination from '@/src/components/Pager/Pagination'
-
+import ArticleList from '@/src/components/Article/ArticleList'
 import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
@@ -34,19 +32,7 @@ const NewArticles = async({
   }
 
   return (
-    <section className="w-full md:w-2/3 flex flex-col items-center px-3">
-      {articles.map(article => (
-        <ArticleBox
-          key={article.id}
-          article={article}
-        />
-      ))
-      }
-    <Pagination
-      pager={pager}
-      getLink={getLink}
-    />
-  </section>
+    <ArticleList articles={articles}/>
   )
 }
 
