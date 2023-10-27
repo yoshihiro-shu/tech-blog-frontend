@@ -17,7 +17,7 @@ export const  ArticleBox = ({ article }: Props) => {
           <Thumbnail title={article?.title}/>
         </Link>
         <div className="bg-white flex flex-col justify-start p-6 border-t-2 border-indigo-600">
-          <Link href={cagtegoryArticlesURL(article.category?.slug)} className="text-blue-700 text-sm font-bold uppercase pb-4">{ article.category?.name }</Link>
+          <Link href={cagtegoryArticlesURL(article.category?.slug)} className="text-blue-700 text-sm font-bold pb-4">{ article.category?.name }</Link>
           <p className="text-sm flex justify-start">
             {article.tags.map(tag => (
               <Link href={tagArticlesURL(tag.slug)} className='mr-2'>#{ tag.name }</Link>
