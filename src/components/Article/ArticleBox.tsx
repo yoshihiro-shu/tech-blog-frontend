@@ -5,8 +5,9 @@ import Article from '@/server/types/article'
 import { cagtegoryArticlesURL, tagArticlesURL } from '@/src/lib/markdown/siteMap';
 import { Thumbnail } from '@/src/components/Article/Thumbnail'
 
-import PublishedAtComponent from './PunlishedAt';
 import ArticleTagComponent from './ArticleTag';
+import ArticleCategoryComponent from './ArticleCatagory'
+import PublishedAtComponent from './PunlishedAt';
 
 type Props = { article: Article }
 
@@ -19,7 +20,7 @@ export const  ArticleBox = ({ article }: Props) => {
           <Thumbnail title={article?.title}/>
         </Link>
         <div className="bg-white flex flex-col justify-start p-6 border-t-2 border-indigo-600">
-          <Link href={cagtegoryArticlesURL(article.category?.slug)} className="text-blue-700 text-sm font-bold pb-4">{ article.category?.name }</Link>
+          <ArticleCategoryComponent category={article.category}/>
           <ArticleTagComponent tags={article.tags} />
           <PublishedAtComponent date={article.updatedAt} />
         </div>

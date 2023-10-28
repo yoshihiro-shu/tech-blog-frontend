@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
 import Article from '@/server/types/article'
-import { cagtegoryArticlesURL } from '@/src/lib/markdown/siteMap';
 
 import ArticleTitleComponent from './ArticleTitle';
 import ArticleTagComponent from './ArticleTag';
+import ArticleCategoryComponent from './ArticleCatagory'
 import MarkdownComponent from '../Markdown';
 import PublishedAtComponent from './PunlishedAt';
 
@@ -16,7 +14,7 @@ const ArticleDetail = async ({ article }: Props) => {
           {/* <TableOfContents content={article.content} /> */}
           <div className="bg-white p-6 w-full">
             <ArticleTitleComponent title={article.title} />
-            <Link href={cagtegoryArticlesURL(article.category.slug)} className="text-blue-700 text-sm font-bold pb-4">{ article?.category?.name }</Link>
+            <ArticleCategoryComponent category={article.category}/>
             <ArticleTagComponent tags={article.tags} />
             <MarkdownComponent content={article.content}/>
             <PublishedAtComponent date={article.updatedAt} />
