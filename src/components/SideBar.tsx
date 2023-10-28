@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image';
 
-import githubIcon from '@/public/github-mark.svg';
-import facebookIcon from '@/public/facebook-icon.svg';
-import twitterIcon from '@/public/twitter-icon.svg';
-import gmailIcon from '@/public/gmail-icon.svg';
-import linkedinIcon from '@/public/linkedin-icon.svg';
-import threadsIcon from '@/public/threads-icon.svg';
-import instagramIcon from '@/public/instagram-icon.svg';
-import dockerIcon from '@/public/docker-icon.svg';
-import qiitaIcon from '@/public/qiita-icon.svg';
+import githubIcon from '@/public/icon/github-mark.svg';
+import facebookIcon from '@/public/icon/facebook-icon.svg';
+import twitterIcon from '@/public/icon/twitter-icon.svg';
+import gmailIcon from '@/public/icon/gmail-icon.svg';
+import linkedinIcon from '@/public/icon/linkedin-icon.svg';
+import threadsIcon from '@/public/icon/threads-icon.svg';
+import instagramIcon from '@/public/icon/instagram-icon.svg';
+import dockerIcon from '@/public/icon/docker-icon.svg';
+import qiitaIcon from '@/public/icon/qiita-icon.svg';
 
 // import LoginForm from "./Login";
 
