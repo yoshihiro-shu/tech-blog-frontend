@@ -1,10 +1,11 @@
+import APIProvider from '@/server/api/v1';
 import apiClient from '@/server/client';
 
 import Article from '@/server/types/article'
+import ArticleList from '@/src/components/Article/ArticleList'
 import Pager from '@/server/types/pager';
 
-import ArticleList from '@/src/components/Article/ArticleList'
-import configs from '@/config/index';
+
 
 // Add some delay here.
 // const fetcher = (url: string) =>
@@ -20,7 +21,7 @@ type TopPageData = {
 
 export default async function Index() {
     let articles: Article[] = [];
-    const res = await apiClient.Get<TopPageData>(configs.BackendAPI + "/top");;
+    const res = await apiClient.Get<TopPageData>(APIProvider.getTopPageApi());;
     articles = res.data.articles
     return (
       <ArticleList articles={articles}/>

@@ -2,9 +2,9 @@ import ArticleList from '@/src/components/Article/ArticleList'
 import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
+import APIProvider from '@/server/api/v1';
 import apiClient from '@/server/client';
-import getNewArticlesApi from '@/server/api/newArticles';
-import configs from '@/config/index';
+import { newAritclesURL } from '@/src/lib/siteMap';
 
 
 type NewArticlesData = {
@@ -17,14 +17,13 @@ const NewArticles = async({
   }: {
     params: { page: string }
   }) => {
-  const res = await apiClient.Get<NewArticlesData>(configs.BackendAPI + getNewArticlesApi(page));
-
+  const res = await apiClient.Get<NewArticlesData>(APIProvider.getNewArticlesApi(page));
   const articles: Article[] = res.data.articles;
   const pager: Pager = res.data.pager;
 
   const getLink = (slug: number): string => {
     // TODO Page RoutingのPlugin的なものを作る
-    return `/new/${slug}`
+    return newAritclesURL(slug.toString())
   }
 
   if (articles.length === 0) {
@@ -32,7 +31,7 @@ const NewArticles = async({
   }
 
   return (
-    <ArticleList articles={articles}/>
+    <ArticleList articles={articles} pager={pager} getLink={getLink}/>
   )
 }
 
