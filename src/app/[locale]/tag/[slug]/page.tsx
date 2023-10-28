@@ -5,7 +5,7 @@ import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
-import getTagArticlesApi from '@/server/api/tagArticles';
+import getTagArticlesApi from '@/server/api/v1/tagArticles';
 import configs from '@/config/index';
 
 

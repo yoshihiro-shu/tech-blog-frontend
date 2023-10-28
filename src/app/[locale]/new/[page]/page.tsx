@@ -3,7 +3,7 @@ import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
-import getNewArticlesApi from '@/server/api/newArticles';
+import getNewArticlesApi from '@/server/api/v1/newArticles';
 import { newAritclesURL } from '@/src/lib/markdown/siteMap';
 import configs from '@/config/index';
 

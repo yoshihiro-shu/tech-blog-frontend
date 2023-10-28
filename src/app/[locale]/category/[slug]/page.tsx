@@ -4,7 +4,7 @@ import ErrorPage from '@/src/components/Error';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
-import getCategoryArticlesApi from '@/server/api/categoryArticles';
+import getCategoryArticlesApi from '@/server/api/v1/categoryArticles';
 import configs from '@/config/index';
 
 
