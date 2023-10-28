@@ -5,7 +5,7 @@ type Props = {content: string}
 const MarkdownComponent = async({content}: Props) => {
     const contentHtml = await markdownToHtml(content);
     return (
-        <div className="prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div className="prose prose-a:text-blue-600 max-w-none" dangerouslySetInnerHTML={{ __html: contentHtml }} />
     )
 }
 
