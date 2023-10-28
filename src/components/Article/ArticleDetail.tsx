@@ -1,15 +1,14 @@
 import Link from 'next/link';
 
 import Article from '@/server/types/article'
-import { markdownToHtml } from '@/src/lib/markdown';
 import { cagtegoryArticlesURL, tagArticlesURL } from '@/src/lib/markdown/siteMap';
 
+import MarkdownComponent from '../Markdown';
 import { PublishedAtComponent } from './PunlishedAt';
 
 type Props = { article: Article }
 const ArticleDetail = async ({ article }: Props) => {
-    // const t = useTranslations("Article");
-    const contentHtml = await markdownToHtml(article.content);
+
     return (
         <article className="flex flex-2 shadow my-4 md:w-3/4">
           {/* <TableOfContents content={article.content} /> */}
@@ -21,7 +20,7 @@ const ArticleDetail = async ({ article }: Props) => {
                  <Link className='ml-2' href={tagArticlesURL(tag.slug)} key={tag.id} >#{tag.name}</Link>
                  )}
             </p>
-            <div className="prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            <MarkdownComponent content={article.content}/>
             <PublishedAtComponent date={article.updatedAt} />
           </div>
         </article>
