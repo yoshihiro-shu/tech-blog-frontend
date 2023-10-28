@@ -1,23 +1,14 @@
 import configs from '@/config/index';
 
 class APIEndpointProvider{
-    backendUrl: string;
-    prefix?: string;
-
-    constructor(backendUrl: string, prefix?: string) {
-        this.backendUrl = backendUrl
-        if (prefix !== undefined) {
-            this.prefix = prefix
-        }
+    private baseUrl: string;
+    constructor(baseUrl: string) {
+        this.baseUrl = baseUrl
     }
 
-    private get baseUrl(): string {
-        if (this.prefix !== undefined) {
-            return `${this.backendUrl}/${this.prefix}`
-        }
-        return this.backendUrl
+    public getTopPageApi(): string {
+        return `${this.baseUrl}/top`
     }
-
     public getNewArticlesApi(page: string): string {
         return `${this.baseUrl}/new/${page}`
     }
@@ -32,6 +23,6 @@ class APIEndpointProvider{
     }
 }
 
-const APIProvider = new APIEndpointProvider(configs.BackendAPI)
+const APIProvider = new APIEndpointProvider(configs.BackendAPI + "api")
 
 export default APIProvider;
