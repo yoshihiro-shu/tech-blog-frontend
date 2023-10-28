@@ -1,3 +1,6 @@
+export const articleDetailURL = (id: string): string => {
+    return `/article/${id}`
+}
 export const newAritclesURL = (page: string): string => {
     return `/new/${page}`
 }
