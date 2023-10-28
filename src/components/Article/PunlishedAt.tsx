@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { displayTime } from '@/src/lib/markdown/datetime';
 
 type Props = {date: Date}
-export const PublishedAtComponent = ({date}: Props) => {
+const PublishedAtComponent = ({date}: Props) => {
     const t = useTranslations("Article");
     return (
         <p className="text-sm flex justify-end">
@@ -10,3 +10,5 @@ export const PublishedAtComponent = ({date}: Props) => {
         </p>
     )
 }
+
+export default PublishedAtComponent
