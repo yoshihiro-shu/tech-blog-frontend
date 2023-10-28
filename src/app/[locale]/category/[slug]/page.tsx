@@ -4,8 +4,8 @@ import ErrorPage from '@/src/components/Error';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
-import getCategoryArticlesApi from '@/server/api/v1/categoryArticles';
-import configs from '@/config/index';
+import APIProvider from '@/server/api/v1';
+
 
 
 type ArticlesListPage = {
@@ -18,7 +18,7 @@ const ArticlesByCategory = async({
   }: {
     params: { slug: string }
   }) => {
-  const res = await apiClient.Get<ArticlesListPage>(configs.BackendAPI + getCategoryArticlesApi(slug));
+  const res = await apiClient.Get<ArticlesListPage>(APIProvider.getCategoryArticlesApi(slug));
 
   const articles: Article[] = res.data.articles;
 //   const pager: Pager = res.data.pager;

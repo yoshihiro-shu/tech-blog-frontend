@@ -5,8 +5,7 @@ import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
-import getTagArticlesApi from '@/server/api/v1/tagArticles';
-import configs from '@/config/index';
+import APIProvider from '@/server/api/v1';
 
 
 type ArticlesListPage = {
@@ -19,8 +18,7 @@ const ArticlesByTag = async({
   }: {
     params: { slug: string }
   }) => {
-  const res = await apiClient.Get<ArticlesListPage>(configs.BackendAPI + getTagArticlesApi(slug));
-
+  const res = await apiClient.Get<ArticlesListPage>(APIProvider.getTagArticlesApi(slug));
   const articles: Article[] = res.data.articles;
 //   const pager: Pager = res.data.pager;
 

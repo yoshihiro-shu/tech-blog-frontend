@@ -2,10 +2,9 @@ import ArticleList from '@/src/components/Article/ArticleList'
 import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
+import APIProvider from '@/server/api/v1';
 import apiClient from '@/server/client';
-import getNewArticlesApi from '@/server/api/v1/newArticles';
 import { newAritclesURL } from '@/src/lib/markdown/siteMap';
-import configs from '@/config/index';
 
 
 type NewArticlesData = {
@@ -18,8 +17,7 @@ const NewArticles = async({
   }: {
     params: { page: string }
   }) => {
-  const res = await apiClient.Get<NewArticlesData>(configs.BackendAPI + getNewArticlesApi(page));
-
+  const res = await apiClient.Get<NewArticlesData>(APIProvider.getNewArticlesApi(page));
   const articles: Article[] = res.data.articles;
   const pager: Pager = res.data.pager;
 
