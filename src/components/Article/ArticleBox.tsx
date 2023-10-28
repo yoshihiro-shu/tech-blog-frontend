@@ -6,6 +6,8 @@ import { displayTime } from '@/src/lib/markdown/datetime';
 import { cagtegoryArticlesURL, tagArticlesURL } from '@/src/lib/markdown/siteMap';
 import { Thumbnail } from '@/src/components/Article/Thumbnail'
 
+import { PublishedAtComponent } from './PunlishedAt';
+
 type Props = { article: Article }
 
 export const  ArticleBox = ({ article }: Props) => {
@@ -23,9 +25,7 @@ export const  ArticleBox = ({ article }: Props) => {
               <Link href={tagArticlesURL(tag.slug)} className='mr-2' key={tag.id}>#{ tag.name }</Link>
             ))}
           </p>
-          <p className="text-sm flex justify-end">
-            {t('LastModifiedAt')}  <>{ displayTime(article.createdAt) }</>
-          </p>
+          <PublishedAtComponent date={article.updatedAt} />
         </div>
       </article>
     )

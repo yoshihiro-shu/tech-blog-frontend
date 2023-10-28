@@ -2,15 +2,13 @@ import Link from 'next/link';
 
 import Article from '@/server/types/article'
 import { markdownToHtml } from '@/src/lib/markdown';
-import { displayTime } from '@/src/lib/markdown/datetime';
 import { cagtegoryArticlesURL, tagArticlesURL } from '@/src/lib/markdown/siteMap';
 
-// import TableOfContents from '@/src/components/TableOfContent';
-
+import { PublishedAtComponent } from './PunlishedAt';
 
 type Props = { article: Article }
-
 const ArticleDetail = async ({ article }: Props) => {
+    // const t = useTranslations("Article");
     const contentHtml = await markdownToHtml(article.content);
     return (
         <article className="flex flex-2 shadow my-4 md:w-3/4">
@@ -24,9 +22,7 @@ const ArticleDetail = async ({ article }: Props) => {
                  )}
             </p>
             <div className="prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
-            <p className="text-sm pb-3">
-                Published on <>{ displayTime(article?.updatedAt) }</>
-            </p>
+            <PublishedAtComponent date={article.updatedAt} />
           </div>
         </article>
       )
