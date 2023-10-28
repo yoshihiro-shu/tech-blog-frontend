@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { displayTime } from '@/src/lib/markdown/datetime';
+import { displayTime } from '@/src/lib/datetime';
 
 type Props = {date: Date}
 const PublishedAtComponent = ({date}: Props) => {
@@ -10,5 +10,4 @@ const PublishedAtComponent = ({date}: Props) => {
         </p>
     )
 }
-
 export default PublishedAtComponent

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Tag } from "@/server/types/tag"
-import { tagArticlesURL } from "@/src/lib/markdown/siteMap"
+import { tagArticlesURL } from "@/src/lib/siteMap"
 
 type Props = {tags: Tag[]}
 const ArticleTagComponent = ({tags}: Props) => {

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Category } from "@/server/types/category"
-import { cagtegoryArticlesURL } from "@/src/lib/markdown/siteMap"
+import { cagtegoryArticlesURL } from "@/src/lib/siteMap"
 
 type Props = {category: Category}
 const ArticleCategoryComponent = ({category}: Props) => {

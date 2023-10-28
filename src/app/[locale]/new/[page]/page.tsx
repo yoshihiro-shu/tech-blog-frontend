@@ -4,7 +4,7 @@ import Pager from '@/server/types/pager';
 
 import APIProvider from '@/server/api/v1';
 import apiClient from '@/server/client';
-import { newAritclesURL } from '@/src/lib/markdown/siteMap';
+import { newAritclesURL } from '@/src/lib/siteMap';
 
 
 type NewArticlesData = {

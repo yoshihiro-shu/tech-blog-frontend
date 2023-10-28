@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
 import Article from '@/server/types/article'
-import { articleDetailURL } from '@/src/lib/markdown/siteMap';
+import { articleDetailURL } from '@/src/lib/siteMap';
 import { Thumbnail } from '@/src/components/Article/Thumbnail'
 
 import ArticleTagComponent from './ArticleTag';
