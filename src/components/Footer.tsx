@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 export const Footer = () => {
   const t = useTranslations("Footer");
   return (
-      <footer className="w-full border-t bg-white pb-12">
+      <footer className="w-full border-t bg-black text-white pb-12">
       <div
         className="relative w-full flex items-center invisible md:visible md:pb-12"
       >
