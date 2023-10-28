@@ -4,6 +4,7 @@ import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
 import getNewArticlesApi from '@/server/api/newArticles';
+import { newAritclesURL } from '@/src/lib/markdown/siteMap';
 import configs from '@/config/index';
 
 
@@ -24,7 +25,7 @@ const NewArticles = async({
 
   const getLink = (slug: number): string => {
     // TODO Page RoutingのPlugin的なものを作る
-    return `/new/${slug}`
+    return newAritclesURL(slug.toString())
   }
 
   if (articles.length === 0) {
@@ -32,7 +33,7 @@ const NewArticles = async({
   }
 
   return (
-    <ArticleList articles={articles}/>
+    <ArticleList articles={articles} pager={pager} getLink={getLink}/>
   )
 }
 
