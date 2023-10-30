@@ -1,5 +1,6 @@
 // import './globals.css'
 // import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 import {ReactNode} from 'react';
 import {getTranslator} from 'next-intl/server';
@@ -34,6 +35,17 @@ export default async function LocaleLayout({children, params: {locale}}: Props){
     <html lang={locale}>
       {/* TODO FIX */}
       {/* <body className={inter.className}> */}
+      {/* Google tag (gtag.js)s */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGNB55Y3V" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-0EGNB55Y3V');
+        `}
+      </Script>
       <body>
         <NavBar />
         <Header />
