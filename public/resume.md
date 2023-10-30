@@ -5,7 +5,7 @@
 |key|value|
 |---|-----|
 |Name|朱　義宏 (Yoshihiro Shu)|
-|Qiita|[yoshihiro-shu](https://qiita.com/yoshihiro-shu)|
+|Github|[yoshihiro-shu](https://github.com/yoshihiro-shu)|
 
 ## スキル
 ### 言語
@@ -350,50 +350,5 @@ AWSのCode Buildによる自動デプロイが失敗する事象が発生
 
 ### 執筆歴
 
-* [Qiita](https://qiita.com/yoshihiro-shu)
+* [Qiita](https://qiita.com/yoshihiro-shu), [技術ブログ](https://yoshihiro-shu.com/ja)
 - 皆さんにみてもらうと言うより知識の定着のためのアウトプットを目的としている記事が多いです。
-
-**執筆一覧**
-
-**Nuxt**
-
-- [Nuxtのvuex-persistedstateをSSRで使ってみる](https://qiita.com/yoshihiro-shu/items/6be9acbb7c70ff5bc05b)
-
-**Kubernetes**
-
-- [KubernetesのLifecycle学習メモ](https://qiita.com/yoshihiro-shu/items/4ac9c72cdf79a089bcc7)
-- [Kubernetesリソースメモ](https://qiita.com/yoshihiro-shu/items/c83c06b919eb4a331fff)
-- [[学習メモ]Certified Kubernetes Administrator（CKA）に向けて〜随時更新〜](https://qiita.com/yoshihiro-shu/items/544447acfab6386d127e)
-
-**GCP**
-
-- [GCPサービスの学習メモ](https://qiita.com/yoshihiro-shu/items/ad4d803139a32d14c5dc)
-
-**Docker**
-
-- [[脳死したい人向け]Nuxt3をDockerでサクッと環境構築、解説してみた](https://qiita.com/yoshihiro-shu/items/d051b926f1e0382b9a77)
-- [[Docker] depends onについて](https://qiita.com/yoshihiro-shu/items/810c73934d9f48c14cb5)
-- [[検証]Multi-stage buildsにしたらめっちゃDocker Imageのサイズが小さくなった話~Golang編~](https://qiita.com/yoshihiro-shu/items/17a55725d75618f0bf48)
-
-**Github Action**
-
-- [[脳死したい人向け]Github ActionでDockerImageのBuild＆Pushの自動化の実装、解説してみた](https://qiita.com/yoshihiro-shu/items/1baf4738338af42242e3)
-
-**上流工程**
-
-- [[チートシート]ユースケース](https://qiita.com/yoshihiro-shu/items/1ac39e2817aa617bc72d)
-- [[学習メモ]ワイヤーフレームの作成](https://qiita.com/yoshihiro-shu/items/c2c5477f32ae752585bb)
-
-**プロジェクト**
-
-- [[要約]いちばんやさしいアジャイル開発の教本](https://qiita.com/yoshihiro-shu/items/504f894f27c2329c1c0b)
-
-**マーケティング**
-
-- [[エンジニア向けに要約]SEO対策・超入門2023](https://qiita.com/yoshihiro-shu/items/2124ff1c9a99274a10fc)
-
-**ビジネス系**
-
-- [[まとめ]「頭のいい説明「すぐできる」コツ」を読んでみて](https://qiita.com/yoshihiro-shu/items/64929f354e040bdb09db)
-- [[要約]ビジネス力養成大全](https://qiita.com/yoshihiro-shu/items/03a64c04e413947e6e6d)
-- [AI分析でわかった トップ5%社員の時間術（トップ５%シリーズ）を読んでみて](https://qiita.com/yoshihiro-shu/items/8ec84faec35ba89152e1)
