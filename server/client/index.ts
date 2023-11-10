@@ -2,7 +2,6 @@ import APIResponse from "./types";
 
 class ApiClient {
   public async Get<T>(endpoint: string): Promise<APIResponse<T>> {
-    console.log('endpoint: ', endpoint)
     return await fetch(endpoint, {
       method: 'GET',
       // For Set-Cookie
@@ -10,6 +9,7 @@ class ApiClient {
     })
     .then(res => {
       if (!res.ok) {
+        console.error('error : #%d : %s', res.status, res.statusText);
         throw new Error(res.statusText)
       }
       // TODO recoilで管理したい
