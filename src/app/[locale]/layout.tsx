@@ -29,6 +29,8 @@ export async function generateMetadata({
   const siteName = t('MetaData.SiteName')
   const siteURL = t('MetaData.SiteURL')
   const siteDescription = t('MetaData.SiteDescription')
+  const twitterSite = t('MetaData.Twitter.Site')
+  const twitterCreater = t('MetaData.Twitter.Creator')
   return {
     title: {
       default: siteName,
@@ -47,8 +49,8 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: siteName,
       siteDescription,
-      site: '@iamyoshitter',
-      creator: '@iamyoshitter',
+      site: twitterSite,
+      creator: twitterCreater,
     },
     // verification: {
     //   google: 'サーチコンソールのやつ',
