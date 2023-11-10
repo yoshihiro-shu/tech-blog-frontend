@@ -29,29 +29,29 @@ export async function generateMetadata({
   const siteName = t('MetaData.SiteName')
   const siteURL = t('MetaData.SiteURL')
   const siteDescription = t('MetaData.SiteDescription')
-  const twitterSite = t('MetaData.Twitter.Site')
-  const twitterCreater = t('MetaData.Twitter.Creator')
+  // const twitterSite = t('MetaData.Twitter.Site')
+  // const twitterCreater = t('MetaData.Twitter.Creator')
   return {
     title: {
       default: siteName,
       template: `%s | ${siteName}`
     },
     siteDescription,
-    openGraph: {
-      title: siteName,
-      siteDescription,
-      siteURL,
-      siteName,
-      locale: 'ja_JP',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: siteName,
-      siteDescription,
-      site: twitterSite,
-      creator: twitterCreater,
-    },
+    // openGraph: {
+    //   title: siteName,
+    //   siteDescription,
+    //   siteURL,
+    //   siteName,
+    //   locale: 'ja_JP',
+    //   type: 'article',
+    // },
+    // twitter: {
+    //   card: 'summary_large_image',
+    //   title: siteName,
+    //   siteDescription,
+    //   site: twitterSite,
+    //   creator: twitterCreater,
+    // },
     // verification: {
     //   google: 'サーチコンソールのやつ',
     // },
