@@ -1,4 +1,13 @@
 {
+  "MetaData": {
+    "SiteName": "テックブログ",
+    "SiteURL": "https://yoshihiro-shu.com/en",
+    "SiteDescription": "〜 学んだことを随時更新しています。 〜",
+    "Twitter": {
+      "Site": "@iamyoshitter",
+      "Creator": "@iamyoshitter"
+    }
+  },
   "Header": {
     "title": "Tech Blog",
     "description": "Daily Tech Blog"
