@@ -2,8 +2,9 @@
 // import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
-import {ReactNode} from 'react';
+import { NextSeo } from 'next-seo';
 import {getTranslator} from 'next-intl/server';
+import {ReactNode} from 'react';
 
 import { NavBar} from '@/src/components/NavBar'
 import { Header } from '@/src/components/Header'
@@ -31,6 +32,7 @@ export async function generateMetadata({
 }
 
 export default async function LocaleLayout({children, params: {locale}}: Props){
+  const t = await getTranslator(locale);
   return (
     <html lang={locale}>
       {/* TODO FIX */}
@@ -46,6 +48,10 @@ export default async function LocaleLayout({children, params: {locale}}: Props){
           gtag('config', 'G-0EGNB55Y3V');
         `}
       </Script>
+      <NextSeo
+        title={t('Header.title')}
+        description={t('Header.description')}
+      />
       <body>
         <NavBar />
         <Header />
