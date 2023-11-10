@@ -1,8 +1,8 @@
-// import Cookies from "js-cookie";
 import APIResponse from "./types";
 
 class ApiClient {
   public async Get<T>(endpoint: string): Promise<APIResponse<T>> {
+    console.log('endpoint: ', endpoint)
     return await fetch(endpoint, {
       method: 'GET',
       // For Set-Cookie
