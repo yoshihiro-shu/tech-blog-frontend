@@ -4,14 +4,6 @@ dns.setDefaultResultOrder("ipv4first")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-          {
-            protocol: 'https',
-            hostname: 'source.unsplash.com',
-          },
-        ],
-    },
     // TODO setting by env
     reactStrictMode: true,
     output: 'standalone'
