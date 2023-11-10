@@ -10,6 +10,7 @@ const config: PlaywrightTestConfig = {
   testDir: "./tests/e2e",
   // If a test fails, retry it additional 2 times
   retries: 2,
+  workers: process.env.CI ? 1 : undefined,
   // Artifacts folder where screenshots, videos, and traces are stored.
   outputDir: './tests/results/e2e',
   use: {
