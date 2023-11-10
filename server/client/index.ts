@@ -41,8 +41,6 @@ class ApiClient {
   }
 }
 
-// const BackendAPI: string = process.env.BASE_URL || ""
-
 const apiClient: ApiClient = new ApiClient()
 
 export default apiClient;

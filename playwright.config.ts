@@ -2,7 +2,7 @@ import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
 
 const PORT = process.env.PORT || 3000;
-const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
+// const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
 const config: PlaywrightTestConfig = {
   // Timeout per test
@@ -14,7 +14,7 @@ const config: PlaywrightTestConfig = {
   // Artifacts folder where screenshots, videos, and traces are stored.
   outputDir: './tests/results/e2e',
   use: {
-    baseURL: BASE_URL,
+    baseURL: "http://localhost:3000",
   },
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests

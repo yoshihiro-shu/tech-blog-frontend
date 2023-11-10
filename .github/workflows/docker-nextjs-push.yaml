@@ -1,6 +1,9 @@
 name: docker-nextjs-push
 
 on:
+  push:
+    branches:
+      - main
   release:
     types: [published]
 
