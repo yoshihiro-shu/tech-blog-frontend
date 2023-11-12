@@ -1,0 +1,11 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "tech-blog-frontend.fullname" . }}-nextjs
+  labels:
+    {{- include "tech-blog-frontend.labels" . | nindent 4 }}
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      {{- include "tech-blog-frontend.selectorLabels" . | nindent 6 }}
