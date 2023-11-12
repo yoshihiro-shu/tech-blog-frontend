@@ -20,12 +20,12 @@ spec:
         ports:
         - containerPort: 3000
         resources:
-          requests:
-            memory: "128Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "250m"
+          # requests:
+          #   memory: "128Mi"
+          #   cpu: "250m"
+          # limits:
+          #   memory: "128Mi"
+          #   cpu: "250m"
         env:
         - name: BASE_URL
           value: {{ .Values.backend.url }}
