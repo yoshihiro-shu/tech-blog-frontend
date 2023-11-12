@@ -21,11 +21,11 @@ spec:
         - containerPort: 3000
         resources:
           requests:
-            memory: "32Mi"
-            cpu: "100m"
+            memory: "64Mi"
+            cpu: "200m"
           limits:
-            memory: "32Mi"
-            cpu: "100m"
+            memory: "64Mi"
+            cpu: "200m"
         env:
         - name: BASE_URL
           value: {{ .Values.backend.url }}
