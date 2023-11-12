@@ -3,7 +3,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "tech-blog-frontend.fullname" . }}-nextjs
   labels:
-    {{ include "tech-blog-backend.labels" . | nindent 4 }}
+    {{- include "tech-blog-frontend.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
