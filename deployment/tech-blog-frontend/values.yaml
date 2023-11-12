@@ -1,0 +1,9 @@
+domain: ""
+
+nextjs:
+  image:
+    repository: ""
+    tag: ""
+
+backend:
+  url: ""

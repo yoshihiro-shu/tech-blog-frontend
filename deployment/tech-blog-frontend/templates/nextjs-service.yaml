@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "tech-blog-frontend.fullname" . }}-nextjs
+  labels:
+    {{- include "tech-blog-frontend.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "tech-blog-frontend.selectorLabels" . | nindent 4 }}
+  ports:
+  - name: nextjs-server
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  type: ClusterIP
