@@ -3,6 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: {{ include "tech-blog-frontend.fullname" . }}-nextjs
   labels:
+    release: kube-prometheus-stack
     {{- include "tech-blog-frontend.labels" . | nindent 4 }}
 spec:
   selector:
