@@ -10,3 +10,4 @@ spec:
       {{- include "tech-blog-frontend.selectorLabels" . | nindent 6 }}
   endpoints:
     - port: nextjs-server
+      interval: 15s
