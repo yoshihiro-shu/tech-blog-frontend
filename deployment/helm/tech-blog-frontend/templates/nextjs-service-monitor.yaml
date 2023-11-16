@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       {{- include "tech-blog-frontend.selectorLabels" . | nindent 6 }}
-  namespaceselector:
+  namespaceSelector:
     matchNames:
     - tech-blog
   endpoints:
