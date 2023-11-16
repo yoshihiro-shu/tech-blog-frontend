@@ -11,7 +11,7 @@ spec:
     matchLabels:
       {{- include "tech-blog-frontend.selectorLabels" . | nindent 6 }}
   namespaceselector:
-    matchnames:
+    matchNames:
     - tech-blog
   endpoints:
     - port: nextjs-server
