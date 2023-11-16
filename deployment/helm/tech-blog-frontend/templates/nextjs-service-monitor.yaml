@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: {{ include "tech-blog-frontend.fullname" . }}-nextjs
-  namespace: prometheus
+  # namespace: prometheus
   labels:
     release: prometheus
     {{- include "tech-blog-frontend.labels" . | nindent 4 }}
