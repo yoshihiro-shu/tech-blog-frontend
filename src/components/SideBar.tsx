@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image';
 
+import configs from '@/config/index';
+
 import githubIcon from '@/public/icon/github-mark.svg';
 import facebookIcon from '@/public/icon/facebook-icon.svg';
 import twitterIcon from '@/public/icon/twitter-icon.svg';
@@ -34,33 +36,51 @@ export const SideBar = () => {
               Contacts
             </p>
             <div className="grid grid-cols-3 gap-3">
-              <Link href="https://www.instagram.com/yoshihiro_shu/">
-                <Image className="hover:opacity-75" src={instagramIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://www.facebook.com/profile.php?id=100008324476833">
-                <Image className="hover:opacity-75" src={facebookIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://twitter.com/yoshihiro_shu">
-                <Image className="hover:opacity-75" src={twitterIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://www.linkedin.com/in/%E7%BE%A9%E5%AE%8F-%E6%9C%B1-696a4423a/">
-                <Image className="hover:opacity-75" src={linkedinIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="mailto:yoihongzhu0321@gmail.com">
-                <Image className="hover:opacity-75" src={gmailIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://www.threads.net/@yoshihiro_shu">
-                <Image className="hover:opacity-75" src={threadsIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://github.com/yoshihiro-shu">
-                <Image className="hover:opacity-75" src={githubIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://hub.docker.com/u/yoshi429">
-                <Image className="hover:opacity-75" src={dockerIcon} alt="" width={500} height={500}/>
-              </Link>
-              <Link href="https://qiita.com/yoshihiro-shu">
-                <Image className="hover:opacity-75" src={qiitaIcon} alt="" width={500} height={500}/>
-              </Link>
+              {configs.InstagramLink &&
+                <Link href={configs.InstagramLink}>
+                  <Image className="hover:opacity-75" src={instagramIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.FacebookLink &&
+                <Link href={configs.FacebookLink}>
+                  <Image className="hover:opacity-75" src={facebookIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.XLink &&
+                <Link href={configs.XLink}>
+                  <Image className="hover:opacity-75" src={twitterIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.LinkedinLink &&
+                <Link href={configs.LinkedinLink}>
+                  <Image className="hover:opacity-75" src={linkedinIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.GmailLink &&
+                <Link href={`mailto:${configs.GmailLink}`}>
+                  <Image className="hover:opacity-75" src={gmailIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.ThereadsLink &&
+                <Link href={configs.ThereadsLink}>
+                  <Image className="hover:opacity-75" src={threadsIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.GithubLink &&
+                <Link href={configs.GithubLink}>
+                  <Image className="hover:opacity-75" src={githubIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.DockerhubLink &&
+                <Link href={configs.DockerhubLink}>
+                  <Image className="hover:opacity-75" src={dockerIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
+              {configs.QiitaLink &&
+                <Link href={configs.QiitaLink}>
+                  <Image className="hover:opacity-75" src={qiitaIcon} alt="" width={500} height={500}/>
+                </Link>
+              }
             </div>
             <Link href="/" className="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
               <i className="fab fa-instagram mr-2" /> 連絡する
