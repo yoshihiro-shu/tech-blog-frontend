@@ -5,15 +5,15 @@ metadata:
   labels:
     {{- include "tech-blog-frontend.labels" . | nindent 4 }}
 data:
-  BACKEND_API: {{ .Values.dotenv.backend.url }}
-  SITE_URL: {{ .Values.dotenv.site.url }}
-	# SNS ACCOUNT
-  X_LINK: {{ .Values.dotenv.sns.x_link }}
-  INSTAGRAM_LINK: {{ .Values.dotenv.sns.instagram_link }}
-  FACEBOOK_LINK: {{ .Values.dotenv.sns.facebook_link }}
-	THEREADS_LINK: {{ .Values.dotenv.sns.thereads_link }}
-	LINKEDIN_LINK: {{ .Values.dotenv.sns.linkedin_link }}
-	GMAIL_LINK: {{ .Values.dotenv.sns.gmail_link }}
-	GITHUB_LINK: {{ .Values.dotenv.sns.github_link }}
-	DOCKERHUB_LINK: {{ .Values.dotenv.sns.dockerhub_link }}
-	QIITA_LINK: {{ .Values.dotenv.sns.qiita_link }}
+    BACKEND_API: {{ .Values.dotenv.backend.url }}
+    SITE_URL: {{ .Values.dotenv.site.url }}
+    # SNS ACCOUNT
+    X_LINK: {{ .Values.dotenv.sns.x_link }}
+    INSTAGRAM_LINK: {{ .Values.dotenv.sns.instagram_link }}
+    FACEBOOK_LINK: {{ .Values.dotenv.sns.facebook_link }}
+    THEREADS_LINK: {{ .Values.dotenv.sns.thereads_link }}
+    LINKEDIN_LINK: {{ .Values.dotenv.sns.linkedin_link }}
+    GMAIL_LINK: {{ .Values.dotenv.sns.gmail_link }}
+    GITHUB_LINK: {{ .Values.dotenv.sns.github_link }}
+    DOCKERHUB_LINK: {{ .Values.dotenv.sns.dockerhub_link }}
+    QIITA_LINK: {{ .Values.dotenv.sns.qiita_link }}
