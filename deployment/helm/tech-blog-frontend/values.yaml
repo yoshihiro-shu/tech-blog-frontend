@@ -3,9 +3,6 @@ nextjs:
     repository: ""
     tag: ""
 
-backend:
-  url: ""
-
 dotenv:
   backend:
     url: ""
