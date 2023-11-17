@@ -23,6 +23,6 @@ class APIEndpointProvider{
     }
 }
 
-const APIProvider = new APIEndpointProvider(configs.backendAPI + "api")
+const APIProvider = new APIEndpointProvider(configs.BackendAPI + "api")
 
 export default APIProvider;

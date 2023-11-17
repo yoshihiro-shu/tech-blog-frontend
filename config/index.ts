@@ -1,6 +1,6 @@
 export default {
     // BackendAPI: process.env.BASE_URL || " http://localhost:8000/",
-    backendAPI: process.env.BACKEND_API,
+    BackendAPI: process.env.BACKEND_API,
 
     // SNS LINK
     XLink: process.env.X_LINK || "",
