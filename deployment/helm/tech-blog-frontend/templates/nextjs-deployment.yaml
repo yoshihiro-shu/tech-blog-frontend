@@ -26,8 +26,6 @@ spec:
           requests:
             cpu: 200m
             memory: 256Mi
-        env:
-        - name: BASE_URL
-          value: {{ .Values.backend.url }}
-        - name: SITE_URL
-          value: https://{{ .Values.domain }}
+        envFrom:
+          - configMapRef:
+              name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-env

@@ -5,3 +5,19 @@ nextjs:
 
 backend:
   url: ""
+
+dotenv:
+  backend:
+    url: ""
+  site:
+    url: ""
+  sns:
+    instagram_link: ""
+    dockerhub_link: ""
+    facebook_link: ""
+    github_link: ""
+    gmail_link: ""
+    linkedin_link: ""
+    qiita_link: ""
+    thereads_link: ""
+    x_link: ""
