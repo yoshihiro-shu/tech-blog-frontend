@@ -40,7 +40,7 @@ export const SideBar = () => {
               <Link href="https://www.facebook.com/profile.php?id=100008324476833">
                 <Image className="hover:opacity-75" src={facebookIcon} alt="" width={500} height={500}/>
               </Link>
-              <Link href="https://twitter.com/iamyoshitter">
+              <Link href="https://twitter.com/yoshihiro_shu">
                 <Image className="hover:opacity-75" src={twitterIcon} alt="" width={500} height={500}/>
               </Link>
               <Link href="https://www.linkedin.com/in/%E7%BE%A9%E5%AE%8F-%E6%9C%B1-696a4423a/">
