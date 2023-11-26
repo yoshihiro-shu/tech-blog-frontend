@@ -2,7 +2,6 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: {{ include "tech-blog-frontend.fullname" . }}-nextjs
-  # namespace: prometheus
   labels:
     release: prometheus
     {{- include "tech-blog-frontend.labels" . | nindent 4 }}
@@ -15,5 +14,5 @@ spec:
     - tech-blog
   endpoints:
     - port: nextjs-server
-      path: api/metirics
+      path: api/metrics
       interval: 30s
