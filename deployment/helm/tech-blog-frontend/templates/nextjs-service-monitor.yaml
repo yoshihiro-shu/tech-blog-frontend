@@ -15,4 +15,5 @@ spec:
     - tech-blog
   endpoints:
     - port: nextjs-server
-      interval: 15s
+      path: api/metirics
+      interval: 30s
