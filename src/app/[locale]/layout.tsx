@@ -78,7 +78,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props){
         `}
       </Script>
       <body>
-        <NavBar />
+        <NavBar locale={locale}/>
         <Header />
         <TopicNav />
           <div className="container mx-auto flex flex-wrap py-6">
