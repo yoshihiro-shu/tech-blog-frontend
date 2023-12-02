@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl'
 
-export const NavBar = () => {
+type Props = { locale: string }
+
+export const NavBar = ({locale}: Props) => {
   const t = useTranslations("Navbar");
     return (
       <>
@@ -40,6 +42,16 @@ export const NavBar = () => {
               <Link className="pl-6" href="/">
                 <i className="fab fa-linkedin" />
               </Link>
+              { locale === 'en' && (
+                <Link className="pl-6" href="/ja">
+                  日本語
+                </Link>
+              )}
+              { locale === 'ja' && (
+                <Link className="pl-6" href="/en">
+                  ENGLISH
+                </Link>
+              )}
             </div>
           </div>
         </nav>
