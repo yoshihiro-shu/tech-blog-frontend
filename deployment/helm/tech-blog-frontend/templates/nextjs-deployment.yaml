@@ -26,15 +26,15 @@ spec:
           requests:
             cpu: 200m
             memory: 256Mi
-        volumeMounts:
-          - mountPath: /app/public/resume.md
-            name: resume-md
-            readOnly: true
-            subPath: resume.md
+        # volumeMounts:
+        #   - mountPath: /app/public/resume.md
+        #     name: resume-md
+        #     readOnly: true
+        #     subPath: resume.md
         envFrom:
           - configMapRef:
               name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-env
-      volumes:
-        - name: resume-md
-          configMap:
-            name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-resume-md
+      # volumes:
+      #   - name: resume-md
+      #     configMap:
+      #       name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-resume-md
