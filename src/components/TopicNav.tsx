@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/i18n/useTranslation'
 
 export const TopicNav = () => {
-  const t = useTranslations('TopicNav');
+  const { t } =  useTranslations('TopicNav');
   const categories = [
     {
       "name": t('Ajaile'),

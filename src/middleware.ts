@@ -1,18 +1,8 @@
-import createMiddleware from 'next-intl/middleware';
-
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'ja'],
-
-  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
-  defaultLocale: 'ja',
-
-  localePrefix: 'as-needed',
-
-  localeDetection: false,
-});
+import type { NextRequest } from 'next/server'
+export function middleware(request: NextRequest) {
+}
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(ja|en)/:path*']
-};
+  // Matcher ignoring `/_next/` and `/api/`
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+}

@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/i18n/useTranslation'
 
 export function Header() {
-  const t = useTranslations("Header");
+  const { t } =  useTranslations("Header");
     return (
       <header className="w-full container mx-auto">
         <div className="flex flex-col items-center py-12">

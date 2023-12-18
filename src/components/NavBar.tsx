@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useTranslations } from '@/i18n/useTranslation'
 
 type Props = { locale: string }
 
 export const NavBar = ({locale}: Props) => {
-  const t = useTranslations("Navbar");
+  const { t } =  useTranslations("Navbar");
     return (
       <>
         <nav className="w-full py-4 bg-blue-800 shadow">
