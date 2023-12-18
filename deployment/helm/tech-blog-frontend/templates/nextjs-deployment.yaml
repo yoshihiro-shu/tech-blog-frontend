@@ -34,7 +34,7 @@ spec:
         envFrom:
           - configMapRef:
               name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-env
-        volumes:
-          - name: resume-md
-            configMap:
-              name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-resume-md
+      volumes:
+        - name: resume-md
+          configMap:
+            name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-resume-md
