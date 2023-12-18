@@ -28,7 +28,7 @@ spec:
             memory: 256Mi
         volumeMounts:
           - mountPath: /app/public
-            name: resume-md
+            name: {{ include "tech-blog-frontend.fullname" . }}-nextjs-resume-md
             readOnly: true
             subPath: resume.md
         envFrom:
