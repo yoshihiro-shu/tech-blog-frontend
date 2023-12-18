@@ -27,7 +27,7 @@ spec:
             cpu: 200m
             memory: 256Mi
         volumeMounts:
-          - mountPath: /app/public
+          - mountPath: /app/public/resume.md
             name: resume-md
             readOnly: true
             subPath: resume.md
