@@ -16,3 +16,18 @@ spec:
     - port: nextjs-server
       path: api/metrics
       interval: 30s
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "tech-blog-frontend.fullname" . }}-cluster-role
+rules:
+- apiGroups:
+  - metrics.k8s.io
+  resources:
+  - pods
+  - services
+  verbs:
+  - get
+  - list
+  - watch
