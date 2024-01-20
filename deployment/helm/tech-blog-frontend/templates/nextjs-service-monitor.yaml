@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      {{- include "tech-blog-frontend.selectorLabels" . | nindent 6 }}
+      {{- include "tech-blog-frontend.labels" . | nindent 6 }}
   namespaceSelector:
     matchNames:
     - tech-blog
