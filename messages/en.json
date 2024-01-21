@@ -13,10 +13,8 @@
   "Navbar": {
     "home": "HOME",
     "profile": "PROFILE",
-    "latestArticles": "Latest"
-  },
-  "Sidebar": {
-    "contactForm": "Contact Form"
+    "latestArticles": "Latest",
+    "contact": "Contact"
   },
   "Footer": {
     "copyright": "© yoshihiro-shu.com"

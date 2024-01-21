@@ -13,10 +13,8 @@
   "Navbar": {
     "home": "ホーム",
     "profile": "プロフィール",
-    "latestArticles": "新着記事"
-  },
-  "Sidebar": {
-    "contactForm": "お問い合わせフォーム"
+    "latestArticles": "新着記事",
+    "contact": "お問い合わせ"
   },
   "Footer": {
     "copyright": "© yoshihiro-shu.com"

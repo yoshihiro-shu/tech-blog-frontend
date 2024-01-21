@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
+import { ContactFormLink } from '../constants/siteName'
+
 type Props = { locale: string }
 
 export const NavBar = ({locale}: Props) => {
@@ -48,6 +50,11 @@ export const NavBar = ({locale}: Props) => {
                   ENGLISH
                 </Link>
               )}
+              {ContactFormLink &&
+                <Link className="pl-6" href={ContactFormLink}>
+                  {t('contact')}
+                </Link>
+              }
             </div>
           </div>
         </nav>
