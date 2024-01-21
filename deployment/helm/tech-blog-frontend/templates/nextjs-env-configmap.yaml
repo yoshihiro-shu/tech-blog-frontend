@@ -6,6 +6,7 @@ metadata:
     {{- include "tech-blog-frontend.labels" . | nindent 4 }}
 data:
     BACKEND_API: {{ .Values.dotenv.backend.url }}
+    SITE_NAME: {{ .Values.dotenv.site.name }}
     SITE_URL: {{ .Values.dotenv.site.url }}
     # SNS ACCOUNT
     X_LINK: {{ .Values.dotenv.sns.x_link }}
