@@ -6,6 +6,7 @@ metadata:
     {{- include "tech-blog-frontend.labels" . | nindent 4 }}
 data:
     BACKEND_API: {{ .Values.dotenv.backend.url }}
+    SITE_NAME: {{ .Values.dotenv.site.name }}
     SITE_URL: {{ .Values.dotenv.site.url }}
     # SNS ACCOUNT
     X_LINK: {{ .Values.dotenv.sns.x_link }}
@@ -17,3 +18,4 @@ data:
     GITHUB_LINK: {{ .Values.dotenv.sns.github_link }}
     DOCKERHUB_LINK: {{ .Values.dotenv.sns.dockerhub_link }}
     QIITA_LINK: {{ .Values.dotenv.sns.qiita_link }}
+    CONCTACT_URL: {{ .Values.dotenv.contact.url }}

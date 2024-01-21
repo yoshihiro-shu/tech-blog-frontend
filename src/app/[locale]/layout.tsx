@@ -10,6 +10,7 @@ import { Header } from '@/src/components/Header'
 import { TopicNav } from '@/src/components/TopicNav'
 import { SideBar} from '@/src/components/SideBar'
 import { Footer } from '@/src/components/Footer'
+import { SITE_NAME, SITE_URL } from '@/src/constants/siteName';
 
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -26,8 +27,8 @@ export async function generateMetadata({
 }: Omit<Props, 'children'>) {
   const t = await getTranslator(locale);
 
-  const siteName = t('MetaData.SiteName')
-  const siteURL = t('MetaData.SiteURL')
+  const siteName = SITE_NAME
+  const siteURL = SITE_URL
   const siteDescription = t('MetaData.SiteDescription')
   const twitterSite = t('MetaData.Twitter.Site')
   const twitterCreater = t('MetaData.Twitter.Creator')

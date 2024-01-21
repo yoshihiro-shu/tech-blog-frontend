@@ -1,7 +1,5 @@
 {
   "MetaData": {
-    "SiteName": "テックブログ",
-    "SiteURL": "https://yoshihiro-shu.com/ja",
     "SiteDescription": "〜 学んだことを随時更新しています。 〜",
     "Twitter": {
       "Site": "@yoshihiro_shu",
@@ -9,13 +7,14 @@
     }
   },
   "Header": {
-    "title": "テックブログ",
+    "title": "Yossy Note",
     "description": "〜 学んだことを随時更新しています。 〜"
   },
   "Navbar": {
     "home": "ホーム",
     "profile": "プロフィール",
-    "latestArticles": "新着記事"
+    "latestArticles": "新着記事",
+    "contact": "お問い合わせ"
   },
   "Footer": {
     "copyright": "© yoshihiro-shu.com"

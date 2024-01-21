@@ -7,6 +7,7 @@ dotenv:
   backend:
     url: ""
   site:
+    name: ""
     url: ""
   sns:
     instagram_link: ""
@@ -18,3 +19,5 @@ dotenv:
     qiita_link: ""
     thereads_link: ""
     x_link: ""
+  contact:
+    url: ""
