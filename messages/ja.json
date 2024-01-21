@@ -17,6 +17,9 @@
     "profile": "プロフィール",
     "latestArticles": "新着記事"
   },
+  "Sidebar": {
+    "contactForm": "お問い合わせフォーム"
+  },
   "Footer": {
     "copyright": "© yoshihiro-shu.com"
   },

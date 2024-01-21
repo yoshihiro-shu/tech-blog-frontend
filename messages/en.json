@@ -17,6 +17,9 @@
     "profile": "PROFILE",
     "latestArticles": "Latest"
   },
+  "Sidebar": {
+    "contactForm": "Contact Form"
+  },
   "Footer": {
     "copyright": "© yoshihiro-shu.com"
   },

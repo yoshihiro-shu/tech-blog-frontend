@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image';
+import { useTranslations } from 'next-intl'
 
 import configs from '@/config/index';
 
@@ -13,9 +14,8 @@ import instagramIcon from '@/public/icon/instagram-icon.svg';
 import dockerIcon from '@/public/icon/docker-icon.svg';
 import qiitaIcon from '@/public/icon/qiita-icon.svg';
 
-// import LoginForm from "./Login";
-
 export const SideBar = () => {
+  const t = useTranslations("Sidebar");
     return (
         <aside className="w-full md:w-1/4 flex flex-col items-center px-3">
           {/* <div className="w-full bg-white shadow flex flex-col my-4 p-6"> */}
@@ -84,7 +84,7 @@ export const SideBar = () => {
             </div>
             {configs.ContactLink &&
               <Link href={configs.ContactLink} className="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
-                <i className="fab fa-instagram mr-2" /> お問い合わせ
+                <i className="fab fa-instagram mr-2" /> {t('contactForm')}
               </Link>
             }
           </div>
