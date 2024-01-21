@@ -1,7 +1,5 @@
 {
   "MetaData": {
-    "SiteName": "テックブログ",
-    "SiteURL": "https://yoshihiro-shu.com/en",
     "SiteDescription": "〜 学んだことを随時更新しています。 〜",
     "Twitter": {
       "Site": "@yoshihiro_shu",
@@ -9,7 +7,7 @@
     }
   },
   "Header": {
-    "title": "Tech Blog",
+    "title": "Yossy Note",
     "description": "Daily Tech Blog"
   },
   "Navbar": {
