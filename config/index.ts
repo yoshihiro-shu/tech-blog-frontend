@@ -12,4 +12,7 @@ export default {
     GithubLink: process.env.GITHUB_LINK || "",
     DockerhubLink: process.env.DOCKERHUB_LINK || "",
     QiitaLink: process.env.QIITA_LINK || "",
+
+    // contant link
+    ContactLink : process.env.CONTACT_LINK || "",
 }

@@ -82,9 +82,11 @@ export const SideBar = () => {
                 </Link>
               }
             </div>
-            <Link href="/" className="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
-              <i className="fab fa-instagram mr-2" /> 連絡する
-            </Link>
+            {configs.ContactLink &&
+              <Link href={configs.ContactLink} className="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+                <i className="fab fa-instagram mr-2" /> お問い合わせ
+              </Link>
+            }
           </div>
         </aside>
     )
