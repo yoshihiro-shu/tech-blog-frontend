@@ -18,3 +18,5 @@ dotenv:
     qiita_link: ""
     thereads_link: ""
     x_link: ""
+  contact:
+    url: ""

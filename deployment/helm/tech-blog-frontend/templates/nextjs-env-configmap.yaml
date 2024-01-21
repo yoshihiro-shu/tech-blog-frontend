@@ -17,3 +17,4 @@ data:
     GITHUB_LINK: {{ .Values.dotenv.sns.github_link }}
     DOCKERHUB_LINK: {{ .Values.dotenv.sns.dockerhub_link }}
     QIITA_LINK: {{ .Values.dotenv.sns.qiita_link }}
+    CONCTACT_URL: {{ .Values.dotenv.contact.url }}
