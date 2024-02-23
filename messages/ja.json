@@ -7,7 +7,7 @@
     }
   },
   "Header": {
-    "title": "Yossy Note",
+    "title": "Yossy's Note",
     "description": "〜 学んだことを随時更新しています。 〜"
   },
   "Navbar": {
@@ -20,8 +20,8 @@
     "copyright": "© yoshihiro-shu.com"
   },
   "TopicNav": {
-    "Ajaile": "アジャイル",
-    "Bussiness": "ビジネス",
+    "Agile": "アジャイル",
+    "Business": "ビジネス",
     "Backend": "バックエンド",
     "Frontend": "フロントエンド",
     "Infrastructure": "インフラ",
