@@ -20,8 +20,8 @@
     "copyright": "© yoshihiro-shu.com"
   },
   "TopicNav": {
-    "Ajaile": "Agile",
-    "Bussiness": "Business",
+    "Agile": "Agile",
+    "Business": "Business",
     "Backend": "Backend",
     "Frontend": "Frontend",
     "Infrastructure": "Infrastructure",
