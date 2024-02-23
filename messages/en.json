@@ -7,7 +7,7 @@
     }
   },
   "Header": {
-    "title": "Yossy Note",
+    "title": "Yossy's Note",
     "description": "Daily Tech Blog"
   },
   "Navbar": {
@@ -20,8 +20,8 @@
     "copyright": "© yoshihiro-shu.com"
   },
   "TopicNav": {
-    "Ajaile": "Ajaile",
-    "Bussiness": "Bussiness",
+    "Ajaile": "Agile",
+    "Bussiness": "Business",
     "Backend": "Backend",
     "Frontend": "Frontend",
     "Infrastructure": "Infrastructure",
