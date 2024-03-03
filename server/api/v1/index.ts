@@ -21,6 +21,10 @@ class APIEndpointProvider{
     public getTagArticlesApi = (slug: string): string => {
         return `${this.baseUrl}/articles/tag/${slug}`
     }
+
+    public getResumeApi(): string {
+        return `${this.baseUrl}/profile/resume`
+    }
 }
 
 const APIProvider = new APIEndpointProvider(configs.BackendAPI + "api")
