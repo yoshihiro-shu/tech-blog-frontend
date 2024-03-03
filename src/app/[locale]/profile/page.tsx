@@ -1,13 +1,16 @@
-import fs from 'fs';
-import path from 'path';
+import APIProvider from '@/server/api/v1';
+import apiClient from '@/server/client';
 
 import StaticPage from '@/src/components/Static/StaticPage';
 
+type ResGetResume = {
+  htmlContent: string
+}
+
 const ProfilePage = async () => {
-  // TODO Get From Backend
-  const content = await fs.readFileSync(path.join('public', 'resume.md')).toString();
+  const res = await apiClient.Get<ResGetResume>(APIProvider.getResumeApi());
   return (
-    <StaticPage content={content}/>
+    <StaticPage content={res.data.htmlContent}/>
   );
 }
 

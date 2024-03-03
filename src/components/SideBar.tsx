@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image';
-import { useTranslations } from 'next-intl'
 
 import configs from '@/config/index';
 
@@ -15,7 +14,6 @@ import dockerIcon from '@/public/icon/docker-icon.svg';
 import qiitaIcon from '@/public/icon/qiita-icon.svg';
 
 export const SideBar = () => {
-  const t = useTranslations("Sidebar");
     return (
         <aside className="w-full md:w-1/4 flex flex-col items-center px-3">
           {/* <div className="w-full bg-white shadow flex flex-col my-4 p-6"> */}
