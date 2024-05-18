@@ -21,3 +21,5 @@ dotenv:
     x_link: ""
   contact:
     url: ""
+prometheus:
+  enabled: false
