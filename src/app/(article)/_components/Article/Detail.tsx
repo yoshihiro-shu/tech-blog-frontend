@@ -1,10 +1,10 @@
 import Article from '@/server/types/article'
 
-import { ArticleTitle } from '@/src/app/(article)/_components/Article/Title';
-import { ArticleTag } from '@/src/app/(article)/_components/Article/Tag';
-import { ArticleCategory } from '@/src/app/(article)/_components/Article/Category';
+import { ArticleTitle } from '@/src/app/(article)/_components/article/Title';
+import { ArticleTag } from '@/src/app/(article)/_components/article/Tag';
+import { ArticleCategory } from '@/src/app/(article)/_components/article/Category';
+import PublishedAt from '@/src/app/(article)/_components/article/PublishedAt';
 import { Markdown } from '@/src/app/_components/markdown';
-import PublishedAtComponent from './PublishedAt';
 
 type Props = { article: Article }
 const ArticleDetail = async ({ article }: Props) => {
@@ -17,7 +17,7 @@ const ArticleDetail = async ({ article }: Props) => {
             <ArticleCategory category={article.category}/>
             <ArticleTag tags={article.tags} />
             <Markdown content={article.content}/>
-            <PublishedAtComponent date={article.updatedAt} />
+            <PublishedAt date={article.updatedAt} />
           </div>
         </article>
       )

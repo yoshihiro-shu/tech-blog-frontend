@@ -1,7 +1,7 @@
-import CurrentPager from "@/src/app/(article)/_components/pager/CurrentPager";
-import NormalPager from "@/src/app/(article)/_components/pager/NormalPager";
-import PrevPager from "@/src/app/(article)/_components/pager/PrevPager";
-import NextPager from "@/src/app/(article)/_components/pager/NextPager";
+import CurrentPager from "@/src/app/(article)/_components/Pager/CurrentPager";
+import NormalPager from "@/src/app/(article)/_components/Pager/NormalPager";
+import PrevPager from "@/src/app/(article)/_components/Pager/PrevPager";
+import NextPager from "@/src/app/(article)/_components/Pager/NextPager";
 
 import Pager from "@/server/types/pager";
 
