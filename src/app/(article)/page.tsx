@@ -12,8 +12,12 @@ type TopPageData = {
 
 export default async function Page() {
     let articles: Article[] = [];
-    const res = await apiClient.Get<TopPageData>(APIProvider.getTopPageApi());;
-    articles = res.data.articles
+    try {
+      const res = await apiClient.Get<TopPageData>(APIProvider.getTopPageApi());
+      articles = res.data.articles;
+    } catch (error) {
+        console.error('Error fetching top page data:', error);
+    }
     return (
       <ArticleList articles={articles}/>
     )

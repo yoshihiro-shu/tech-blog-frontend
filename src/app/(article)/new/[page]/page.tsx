@@ -17,9 +17,15 @@ const NewArticles = async({
   }: {
     params: { page: string }
   }) => {
-  const res = await apiClient.Get<NewArticlesData>(APIProvider.getNewArticlesApi(page));
-  const articles: Article[] = res.data.articles;
-  const pager: Pager = res.data.pager;
+    let articles: Article[] = [];
+    let pager: Pager = {} as Pager;
+    try {
+      const res = await apiClient.Get<NewArticlesData>(APIProvider.getNewArticlesApi(page));
+      articles = res.data.articles;
+      pager = res.data.pager;
+    } catch (error) {
+        console.error('Error fetching new articles data:', error);
+    }
 
   const getLink = (slug: number): string => {
     // TODO Page RoutingのPlugin的なものを作る

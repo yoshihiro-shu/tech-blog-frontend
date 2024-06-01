@@ -18,8 +18,13 @@ const ArticlesByTag = async({
   }: {
     params: { slug: string }
   }) => {
-  const res = await apiClient.Get<ArticlesListPage>(APIProvider.getTagArticlesApi(slug));
-  const articles: Article[] = res.data.articles;
+    let articles: Article[] = [];
+    try {
+      const res = await apiClient.Get<ArticlesListPage>(APIProvider.getTagArticlesApi(slug));
+      articles = res.data.articles;
+    } catch (error) {
+        console.error('Error fetching tag articles data:', error);
+    }
 //   const pager: Pager = res.data.pager;
 
 //   const getPagerLink = (slug: number): string => {
