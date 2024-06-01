@@ -1,4 +1,4 @@
-import { Markdown } from "@/src/app/_components/markdown";
+import { Markdown } from "@/app/_components/markdown";
 
 type Props = { content: string }
 

@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 import Article from '@/server/types/article'
-import { articleDetailURL } from '@/src/lib/siteMap';
-import Thumbnail from '@/src/app/(article)/_components/article/Thumbnail';
-import ArticleTag from '@/src/app/(article)/_components/article/Tag';
-import ArticleCategory from '@/src/app/(article)/_components/article/Category';
-import PublishedAtComponent from '@/src/app/(article)/_components/article/PublishedAt';
+import { articleDetailURL } from '@/lib/siteMap';
+import Thumbnail from '@/app/(article)/_components/article/Thumbnail';
+import ArticleTag from '@/app/(article)/_components/article/Tag';
+import ArticleCategory from '@/app/(article)/_components/article/Category';
+import PublishedAtComponent from '@/app/(article)/_components/article/PublishedAt';
 
 type Props = { article: Article }
 const ArticleBox = ({ article }: Props) => {

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Category } from "@/server/types/category"
-import { cagtegoryArticlesURL } from "@/src/lib/siteMap"
+import { cagtegoryArticlesURL } from "@/lib/siteMap"
 
 type Props = {category: Category}
 const ArticleCategory = ({category}: Props) => {

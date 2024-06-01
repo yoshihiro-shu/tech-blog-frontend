@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Tag } from "@/server/types/tag"
-import { tagArticlesURL } from "@/src/lib/siteMap"
+import { tagArticlesURL } from "@/lib/siteMap"
 
 type Props = {tags: Tag[]}
 const ArticleTag = ({tags}: Props) => {

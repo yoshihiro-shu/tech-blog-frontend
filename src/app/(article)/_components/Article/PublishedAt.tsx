@@ -1,4 +1,4 @@
-import { displayTime } from '@/src/lib/datetime';
+import { displayTime } from '@/lib/datetime';
 
 type Props = {date: Date}
 const PublishedAt = ({date}: Props) => {

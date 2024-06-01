@@ -1,7 +1,7 @@
 import APIProvider from '@/server/api/v1';
 import apiClient from '@/server/client';
 
-import { StaticPage } from '@/src/app/(static)/_components/static_page';
+import { StaticPage } from '@/app/(static)/_components/static_page';
 
 type ResGetResume = {
   htmlContent: string

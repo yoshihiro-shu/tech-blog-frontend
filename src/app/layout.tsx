@@ -3,13 +3,12 @@ import { type Metadata } from "next";
 import {ReactNode} from 'react';
 import './globals.css'
 
-import { GoogleAnalytics } from '@/src/app/_components/google_analytics'
-import { NavBar } from '@/src/app/_layout/nav_bar'
-import { Header } from '@/src/app/_layout/header'
-import { TopicNav } from '@/src/app/_layout/topic_nav'
-import { Footer } from '@/src/app/_layout/footer'
-import { SITE_NAME, SITE_URL } from '@/src/constants/siteName';
-import { GOOGLE_ANALYTICS_ID } from '@/src/constants/siteName'
+import { NavBar } from '@/app/_layout/nav_bar'
+import { Header } from '@/app/_layout/header'
+import { TopicNav } from '@/app/_layout/topic_nav'
+import { Footer } from '@/app/_layout/footer'
+import { GoogleAnalytics } from '@/app/_components/google_analytics'
+import { SITE_NAME, SITE_URL, GOOGLE_ANALYTICS_ID } from '@/constants/siteName';
 
 type Props = {
   children: ReactNode;

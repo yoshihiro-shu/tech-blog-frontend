@@ -1,17 +1,17 @@
 import Link from 'next/link'
 import Image from 'next/image';
 
-import configs from '@/config/index';
+import configs from '@/config';
 
-import githubIcon from '@/public/icon/github-mark.svg';
-import facebookIcon from '@/public/icon/facebook-icon.svg';
-import twitterIcon from '@/public/icon/twitter-icon.svg';
-import gmailIcon from '@/public/icon/gmail-icon.svg';
-import linkedinIcon from '@/public/icon/linkedin-icon.svg';
-import threadsIcon from '@/public/icon/threads-icon.svg';
-import instagramIcon from '@/public/icon/instagram-icon.svg';
-import dockerIcon from '@/public/icon/docker-icon.svg';
-import qiitaIcon from '@/public/icon/qiita-icon.svg';
+import githubIcon from '@/../public/icon/github-mark.svg';
+import facebookIcon from '@/../public/icon/facebook-icon.svg';
+import twitterIcon from '@/../public/icon/twitter-icon.svg';
+import gmailIcon from '@/../public/icon/gmail-icon.svg';
+import linkedinIcon from '@/../public/icon/linkedin-icon.svg';
+import threadsIcon from '@/../public/icon/threads-icon.svg';
+import instagramIcon from '@/../public/icon/instagram-icon.svg';
+import dockerIcon from '@/../public/icon/docker-icon.svg';
+import qiitaIcon from '@/../public/icon/qiita-icon.svg';
 
 export const SideBar = () => {
     return (

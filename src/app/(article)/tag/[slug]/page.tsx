@@ -1,5 +1,5 @@
-import ArticleList from '@/src/app/(article)/_components/article/List'
-import ErrorPage from '@/src/app/_components/error';
+import ArticleList from '@/app/(article)/_components/article/List'
+import ErrorPage from '@/app/_components/error';
 
 import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';

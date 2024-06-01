@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import register from '@/src/lib/prometheus';
+import register from '@/lib/prometheus';
 
 /**
  * Retrieves metrics and returns a Response object with the metrics data and appropriate headers.

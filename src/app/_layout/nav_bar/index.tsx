@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { ContactFormLink } from '@/src/constants/siteName'
+import { ContactFormLink } from '@/constants/siteName'
 
 export const NavBar = () => {
     const leftNav = [

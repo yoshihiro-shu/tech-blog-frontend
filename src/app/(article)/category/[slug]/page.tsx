@@ -1,6 +1,6 @@
-import ArticleList from '@/src/app/(article)/_components/article/List'
+import ArticleList from '@/app/(article)/_components/article/List'
 import Article from '@/server/types/article';
-import ErrorPage from '@/src/app/_components/error';
+import ErrorPage from '@/app/_components/error';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';

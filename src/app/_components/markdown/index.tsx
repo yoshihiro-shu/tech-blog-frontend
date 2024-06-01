@@ -1,4 +1,4 @@
-import { markdownToHtml } from '@/src/lib/markdown';
+import { markdownToHtml } from '@/lib/markdown';
 
 type Props = {content: string}
 
