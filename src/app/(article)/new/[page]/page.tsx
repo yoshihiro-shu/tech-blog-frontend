@@ -12,7 +12,7 @@ type NewArticlesData = {
     pager: Pager,
   }
 
-const NewArticles = async({
+const Page = async({
     params: { page },
   }: {
     params: { page: string }
@@ -41,4 +41,4 @@ const NewArticles = async({
   )
 }
 
-export default NewArticles;
+export default Page;

@@ -3,7 +3,7 @@ import ArticleDetail from '@/app/(article)/_components/article/Detail';
 import apiClient from '@/server/client';
 import APIProvider from '@/server/api/v1';
 
-const ArticleDetailPage = async({
+const Page = async({
     params: { id },
   }: {
     params: { id: string }
@@ -19,4 +19,4 @@ const ArticleDetailPage = async({
   )
 }
 
-export default ArticleDetailPage;
+export default Page;

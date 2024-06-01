@@ -13,7 +13,7 @@ type ArticlesListPage = {
     pager: Pager,
   }
 
-const ArticlesByCategory = async({
+const Page = async({
     params: { slug },
   }: {
     params: { slug: string }
@@ -37,4 +37,4 @@ const ArticlesByCategory = async({
   )
 }
 
-export default ArticlesByCategory;
+export default Page;
