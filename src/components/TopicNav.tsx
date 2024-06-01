@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 export const TopicNav = () => {
-    const agile = 'Agile';
-    const requirementDefinition = 'RequirementDefinition';
-    const business = 'Business';
-    const backend = 'Backend';
-    const frontend = 'Frontend';
-    const infrastructure = 'Infrastructure';
-    const marketing = 'Marketing';
+    const agile = 'アジャイル';
+    const requirementDefinition = '要件定義';
+    const business = 'ビジネス';
+    const backend = 'バックエンド';
+    const frontend = 'フロントエンd';
+    const infrastructure = 'インフラ';
+    const marketing = 'マーケティング';
     return (
       <nav className="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
         <div className="block sm:hidden">
