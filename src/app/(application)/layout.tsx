@@ -2,7 +2,6 @@
 // import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
-import { getTranslator } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 import { NavBar} from '@/src/components/NavBar'
@@ -11,7 +10,6 @@ import { TopicNav } from '@/src/components/TopicNav'
 import { SideBar} from '@/src/components/SideBar'
 import { Footer } from '@/src/components/Footer'
 import { SITE_NAME, SITE_URL } from '@/src/constants/siteName';
-
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -25,13 +23,12 @@ type Props = {
 export async function generateMetadata({
   params: {locale}
 }: Omit<Props, 'children'>) {
-  const t = await getTranslator(locale);
 
   const siteName = SITE_NAME
   const siteURL = SITE_URL
-  const siteDescription = t('MetaData.SiteDescription')
-  const twitterSite = t('MetaData.Twitter.Site')
-  const twitterCreater = t('MetaData.Twitter.Creator')
+  const siteDescription = "〜 学んだことを随時更新しています。 〜"
+  const twitterSite = "@yoshihiro_shu"
+  const twitterCreater = "@yoshihiro_shu"
   return {
     title: {
       default: siteName,
@@ -62,7 +59,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({children, params: {locale}}: Props){
+export default async function Layout({children, params: {locale}}: Props){
   return (
     <html lang={locale}>
       {/* TODO FIX */}
@@ -79,7 +76,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props){
         `}
       </Script>
       <body>
-        <NavBar locale={locale}/>
+        <NavBar />
         <Header />
         <TopicNav />
           <div className="container mx-auto flex flex-wrap py-6">

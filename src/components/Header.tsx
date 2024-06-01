@@ -1,9 +1,7 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
 import { SITE_NAME } from '../constants/siteName';
 
 export function Header() {
-  const t = useTranslations("Header");
     return (
       <header className="w-full container mx-auto">
         <div className="flex flex-col items-center py-12">
@@ -12,7 +10,7 @@ export function Header() {
           </Link>
           <br/>
           <p className="text-lg text-gray-600">
-            {t('description')}
+            〜 学んだことを随時更新しています。 〜
           </p>
         </div>
       </header>

@@ -1,23 +1,19 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
 
 import { ContactFormLink } from '../constants/siteName'
 
-type Props = { locale: string }
-
-export const NavBar = ({locale}: Props) => {
-  const t = useTranslations("Navbar");
+export const NavBar = () => {
     const leftNav = [
       {
-        "name": t('home'),
+        "name": "ホーム",
         "href": "/"
       },
       {
-        "name": t('profile'),
+        "name": "プロフィール",
         "href": "/profile"
       },
       {
-        "name": t('latestArticles'),
+        "name": "新着記事",
         "href": "/new/1"
       }
     ]
@@ -40,7 +36,7 @@ export const NavBar = ({locale}: Props) => {
             </nav>
 
             <div className="flex items-center text-lg no-underline text-white pr-6">
-              { locale === 'en' && (
+              {/* { locale === 'en' && (
                 <Link className="pl-6" href="/ja">
                   日本語
                 </Link>
@@ -49,10 +45,10 @@ export const NavBar = ({locale}: Props) => {
                 <Link className="pl-6" href="/en">
                   ENGLISH
                 </Link>
-              )}
+              )} */}
               {ContactFormLink &&
                 <Link className="pl-6" href={ContactFormLink}>
-                  {t('contact')}
+                  お問い合わせ
                 </Link>
               }
             </div>

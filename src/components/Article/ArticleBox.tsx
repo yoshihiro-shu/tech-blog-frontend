@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
 
 import Article from '@/server/types/article'
 import { articleDetailURL } from '@/src/lib/siteMap';
@@ -12,7 +11,6 @@ import PublishedAtComponent from './PunlishedAt';
 type Props = { article: Article }
 
 export const  ArticleBox = ({ article }: Props) => {
-    const t = useTranslations("Article");
     return (
       <article className="flex flex-col shadow my-4 border-2 border-indigo-600">
         <Link href={articleDetailURL(article.id.toString())} className="hover:opacity-75 w-full">

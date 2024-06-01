@@ -1,8 +1,6 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
 
 export const Footer = () => {
-  const t = useTranslations("Footer");
   return (
       <footer className="w-full border-t bg-black text-white pb-12">
       <div
@@ -24,7 +22,7 @@ export const Footer = () => {
           <Link href="/privacy" className="uppercase px-3">Privacy Policy</Link>
         </div>
         <div className="pb-6">
-          {t('copyright')}
+          © yoshihiro-shu.com
         </div>
       </div>
     </footer>
