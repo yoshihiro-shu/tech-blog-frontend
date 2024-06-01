@@ -1,10 +1,10 @@
 import Article from '@/server/types/article'
 
-import ArticleTitleComponent from './ArticleTitle';
-import ArticleTagComponent from './ArticleTag';
-import ArticleCategoryComponent from './ArticleCatagory'
+import ArticleTitleComponent from './title';
+import ArticleTagComponent from './tag';
+import ArticleCategoryComponent from './catagory'
 import { Markdown } from '@/src/app/_components/markdown';
-import PublishedAtComponent from './PunlishedAt';
+import PublishedAtComponent from './published_at';
 
 type Props = { article: Article }
 const ArticleDetail = async ({ article }: Props) => {
