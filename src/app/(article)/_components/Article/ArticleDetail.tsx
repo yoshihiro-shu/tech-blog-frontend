@@ -1,8 +1,8 @@
 import Article from '@/server/types/article'
 
-import { ArticleTitle } from '@/src/app/(article)/_components/article/ArticleTitle';
-import { ArticleTag}  from './Tag';
-import { ArticleCategory } from '@/src/app/(article)/_components/article/ArticleCategory';
+import { ArticleTitle } from '@/src/app/(article)/_components/Article/ArticleTitle';
+import { ArticleTag } from '@/src/app/(article)/_components/Article/ArticleTag';
+import { ArticleCategory } from '@/src/app/(article)/_components/Article/ArticleCategory';
 import { Markdown } from '@/src/app/_components/markdown';
 import PublishedAtComponent from './PublishedAt';
 
