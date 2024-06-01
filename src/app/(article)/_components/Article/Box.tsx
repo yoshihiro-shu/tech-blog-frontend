@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 import Article from '@/server/types/article'
 import { articleDetailURL } from '@/lib/siteMap';
-import Thumbnail from '@/app/(article)/_components/article/Thumbnail';
-import ArticleTag from '@/app/(article)/_components/article/Tag';
-import ArticleCategory from '@/app/(article)/_components/article/Category';
-import PublishedAtComponent from '@/app/(article)/_components/article/PublishedAt';
+import Thumbnail from '@/app/(article)/_components/Article/Thumbnail';
+import ArticleTag from '@/app/(article)/_components/Article/Tag';
+import ArticleCategory from '@/app/(article)/_components/Article/Category';
+import PublishedAtComponent from '@/app/(article)/_components/Article/PublishedAt';
 
 type Props = { article: Article }
 const ArticleBox = ({ article }: Props) => {
