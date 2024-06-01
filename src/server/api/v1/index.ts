@@ -1,4 +1,4 @@
-import configs from '@/config/index';
+import {BACKEND_API} from '@/constants/app';
 
 class APIEndpointProvider{
     private baseUrl: string;
@@ -27,6 +27,6 @@ class APIEndpointProvider{
     }
 }
 
-const APIProvider = new APIEndpointProvider(configs.BackendAPI + "api")
+const APIProvider = new APIEndpointProvider(BACKEND_API + "api")
 
 export default APIProvider;
