@@ -4,7 +4,7 @@ import { Category } from "@/server/types/category"
 import { cagtegoryArticlesURL } from "@/src/lib/siteMap"
 
 type Props = {category: Category}
-const ArticleCategoryComponent = ({category}: Props) => {
+export const ArticleCategory = ({category}: Props) => {
     return (
         <Link
         href={cagtegoryArticlesURL(category.slug)}
@@ -12,6 +12,4 @@ const ArticleCategoryComponent = ({category}: Props) => {
             { category.name }
         </Link>
     )
-}
-
-export default ArticleCategoryComponent
+};

@@ -1,6 +1,6 @@
 import Article from '@/server/types/article'
 import Pager from '@/server/types/pager'
-import { ArticleBox } from '@/src/app/(article)/_components/article/box'
+import { ArticleBox } from '@/src/app/(article)/_components/article/ArticleBox'
 import Pagination from '@/src/app/(article)/_components/pager/Pagination'
 
 
@@ -24,4 +24,4 @@ const ArticlList = ({ articles, pager, getLink }: Props)  => {
     )
 }
 
-export default ArticlList
+export default ArticlList;
