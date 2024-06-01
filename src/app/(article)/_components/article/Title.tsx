@@ -1,5 +1,5 @@
 type Props = { title: string}
-const ArticleTitle = ({title}: Props) => {
+const Title = ({title}: Props) => {
     return (
         <div className="text-4xl font-bold hover:text-gray-700 pb-4">
             { title }
@@ -7,4 +7,4 @@ const ArticleTitle = ({title}: Props) => {
     )
 };
 
-export default ArticleTitle;
+export default Title;
