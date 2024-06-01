@@ -1,9 +1,9 @@
 import Article from '@/server/types/article';
 
-import ArticleTitle from '@/app/(article)/_components/Article/Title';
-import ArticleTag from '@/app/(article)/_components/Article/Tag';
-import ArticleCategory from '@/app/(article)/_components/Article/Category';
-import PublishedAt from '@/app/(article)/_components/Article/PublishedAt';
+import ArticleTitle from '@/app/(article)/_components/article/Title';
+import ArticleTag from '@/app/(article)/_components/article/Tag';
+import ArticleCategory from '@/app/(article)/_components/article/Category';
+import PublishedAt from '@/app/(article)/_components/article/PublishedAt';
 import { Markdown } from '@/app/_components/markdown';
 
 type Props = { article: Article }
