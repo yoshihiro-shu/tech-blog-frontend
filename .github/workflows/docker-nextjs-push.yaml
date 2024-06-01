@@ -22,9 +22,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
-        name: Clear cache
-        run: npm cache clean --force
-      -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
@@ -43,4 +40,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: ./Dockerfile
           push: true
-          # tags: ghcr.io/${{ github.actor }}/tech-blog-frontend:${{ env.DOCKER_TAG }}
+          tags: ghcr.io/${{ github.actor }}/tech-blog-frontend:${{ env.DOCKER_TAG }}
