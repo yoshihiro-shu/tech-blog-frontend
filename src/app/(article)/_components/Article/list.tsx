@@ -1,7 +1,7 @@
 import Article from '@/server/types/article'
 import Pager from '@/server/types/pager'
 import { ArticleBox } from '@/src/app/(article)/_components/article/box'
-import Pagination from '@/src/app/(article)/_components/Pager/Pagination'
+import Pagination from '@/src/app/(article)/_components/pager/Pagination'
 
 
 type Props = {
