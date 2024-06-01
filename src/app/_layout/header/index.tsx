@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { SITE_NAME } from '../constants/siteName';
+import { SITE_NAME } from '@/src/constants/siteName';
 
 export function Header() {
     return (

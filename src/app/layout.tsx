@@ -4,6 +4,10 @@ import {ReactNode} from 'react';
 import './globals.css'
 
 import { GoogleAnalytics } from '@/src/app/_components/google_analytics'
+import { NavBar } from '@/src/app/_layout/nav_bar'
+import { Header } from '@/src/app/_layout/header'
+import { TopicNav } from '@/src/app/_layout/topic_nav'
+import { Footer } from '@/src/app/_layout/footer'
 import { SITE_NAME, SITE_URL } from '@/src/constants/siteName';
 import { GOOGLE_ANALYTICS_ID } from '@/src/constants/siteName'
 
@@ -21,7 +25,11 @@ export default function RootLayout({children}: Props) {
     <html lang="ja">
       <GoogleAnalytics id={GOOGLE_ANALYTICS_ID}/>
       <body className={inter.className}>
-        {children}
+        <NavBar />
+        <Header />
+        <TopicNav />
+          {children}
+        <Footer />
       </body>
     </html>
   )
