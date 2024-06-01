@@ -3,7 +3,7 @@ import Article from '@/server/types/article'
 import ArticleTitleComponent from './ArticleTitle';
 import ArticleTagComponent from './ArticleTag';
 import ArticleCategoryComponent from './ArticleCatagory'
-import MarkdownComponent from '../Markdown';
+import { Markdown } from '@/src/app/_components/markdown';
 import PublishedAtComponent from './PunlishedAt';
 
 type Props = { article: Article }
@@ -16,7 +16,7 @@ const ArticleDetail = async ({ article }: Props) => {
             <ArticleTitleComponent title={article.title} />
             <ArticleCategoryComponent category={article.category}/>
             <ArticleTagComponent tags={article.tags} />
-            <MarkdownComponent content={article.content}/>
+            <Markdown content={article.content}/>
             <PublishedAtComponent date={article.updatedAt} />
           </div>
         </article>

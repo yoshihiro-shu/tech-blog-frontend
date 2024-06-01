@@ -1,11 +1,11 @@
-import ArticleList from '@/src/components/Article/ArticleList'
+import ArticleList from '@/src/app/(article)/_components/Article/ArticleList'
+import ErrorPage from '@/src/app/_components/error';
+
 import Article from '@/server/types/article';
-import ErrorPage from '@/src/components/Error';
 import Pager from '@/server/types/pager';
 
 import apiClient from '@/server/client';
 import APIProvider from '@/server/api/v1';
-
 
 
 type ArticlesListPage = {
@@ -13,23 +13,22 @@ type ArticlesListPage = {
     pager: Pager,
   }
 
-const ArticlesByCategory = async({
+const ArticlesByTag = async({
     params: { slug },
   }: {
     params: { slug: string }
   }) => {
-  const res = await apiClient.Get<ArticlesListPage>(APIProvider.getCategoryArticlesApi(slug));
-
+  const res = await apiClient.Get<ArticlesListPage>(APIProvider.getTagArticlesApi(slug));
   const articles: Article[] = res.data.articles;
 //   const pager: Pager = res.data.pager;
 
 //   const getPagerLink = (slug: number): string => {
 //     // TODO Page RoutingのPlugin的なものを作る
-//     return `/cateogory/${slug}`
+//     return `/tag/${slug}`
 //   }
 
   if (articles.length === 0) {
-    return <ErrorPage statusCode={404} errorMsg={`Category '${slug}' Articles is Not Found`}/>
+    return <ErrorPage statusCode={404} errorMsg={`Tag '${slug}' Articles is Not Found`}/>
   }
 
   return (
@@ -37,4 +36,4 @@ const ArticlesByCategory = async({
   )
 }
 
-export default ArticlesByCategory;
+export default ArticlesByTag;

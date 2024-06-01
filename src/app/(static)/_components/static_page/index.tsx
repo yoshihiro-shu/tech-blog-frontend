@@ -1,14 +1,13 @@
-import MarkdownComponent from "../Markdown";
+import { Markdown } from "@/src/app/_components/markdown";
 
 type Props = { content: string }
-const StaticPage = ({ content }: Props) => {
+
+export const StaticPage = ({ content }: Props) => {
     return (
         <article className="flex flex-2 shadow my-4">
             <div className="bg-white p-6 w-full">
-                <MarkdownComponent content={content} />
+                <Markdown content={content} />
             </div>
         </article>
     );
-}
-
-export default StaticPage;
+};

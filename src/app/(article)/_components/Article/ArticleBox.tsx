@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import Article from '@/server/types/article'
 import { articleDetailURL } from '@/src/lib/siteMap';
-import { Thumbnail } from '@/src/components/Article/Thumbnail'
+import { Thumbnail } from '@/src/app/(article)/_components/Article/Thumbnail'
 
 import ArticleTagComponent from './ArticleTag';
 import ArticleCategoryComponent from './ArticleCatagory'

@@ -1,4 +1,4 @@
-import { SideBar} from '@/src/app/(application)/_layout/sidebar'
+import { SideBar} from '@/src/app/(article)/_layout/sidebar'
 
 export default async function Layout({ children }: { children: React.ReactNode }){
   return (
