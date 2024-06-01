@@ -15,7 +15,6 @@ RUN \
   elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i; \
   else echo "Lockfile not found." && exit 1; \
   fi
-RUN yarn install
 
 # 2. Rebuild the source code only when needed
 FROM base AS builder
