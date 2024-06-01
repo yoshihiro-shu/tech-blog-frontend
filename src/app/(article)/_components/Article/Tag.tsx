@@ -4,7 +4,7 @@ import { Tag } from "@/server/types/tag"
 import { tagArticlesURL } from "@/src/lib/siteMap"
 
 type Props = {tags: Tag[]}
-export const ArticleTag = ({tags}: Props) => {
+const ArticleTag = ({tags}: Props) => {
     return (
         <p className='flex justify-end'>
             {tags.map((tag) =>
@@ -18,3 +18,5 @@ export const ArticleTag = ({tags}: Props) => {
         </p>
     )
 };
+
+export default ArticleTag;
