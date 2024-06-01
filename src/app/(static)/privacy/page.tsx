@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { StaticPage } from '@/app/(static_page)/_components/StaticPage';
+import { StaticPage } from '@/app/(static)/_components/StaticPage';
 
 const PrivacyPolicyPage = async () => {
   const content = await fs.readFileSync(path.join('public', 'privacy-policy.md')).toString();
