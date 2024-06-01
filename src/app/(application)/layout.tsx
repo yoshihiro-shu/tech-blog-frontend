@@ -1,5 +1,5 @@
 // import './globals.css'
-// import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
 import { NavBar} from '@/src/components/NavBar'
@@ -8,13 +8,12 @@ import { TopicNav } from '@/src/components/TopicNav'
 import { SideBar} from '@/src/components/SideBar'
 import { Footer } from '@/src/components/Footer'
 
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export default async function Layout({ children }: { children: React.ReactNode }){
   return (
     <html lang="ja">
       {/* TODO FIX */}
-      {/* <body className={inter.className}> */}
       {/* Google tag (gtag.js)s */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGNB55Y3V" />
       <Script id="google-analytics">
@@ -26,7 +25,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
           gtag('config', 'G-0EGNB55Y3V');
         `}
       </Script>
-      <body>
+      <body className={inter.className}>
         <NavBar />
         <Header />
         <TopicNav />
