@@ -13,7 +13,7 @@ export const TopicNav = () => {
         <div className="block sm:hidden">
           <Link
             href="/"
-            className="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+            className="md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
           >
             Topics <i className="fas ml-2" />
           </Link>
