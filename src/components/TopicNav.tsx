@@ -5,7 +5,7 @@ export const TopicNav = () => {
     const requirementDefinition = '要件定義';
     const business = 'ビジネス';
     const backend = 'バックエンド';
-    const frontend = 'フロントエンd';
+    const frontend = 'フロントエンド';
     const infrastructure = 'インフラ';
     const marketing = 'マーケティング';
     return (
