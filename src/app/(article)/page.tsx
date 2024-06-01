@@ -10,7 +10,7 @@ type TopPageData = {
   pager: Pager,
 }
 
-export default async function Index() {
+export default async function Page() {
     let articles: Article[] = [];
     const res = await apiClient.Get<TopPageData>(APIProvider.getTopPageApi());;
     articles = res.data.articles
