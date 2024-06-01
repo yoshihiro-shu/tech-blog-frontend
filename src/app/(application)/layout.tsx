@@ -1,30 +1,21 @@
 // import './globals.css'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 
+import { GoogleAnalytics } from './_components/google_analytics'
 import { NavBar} from '@/src/components/NavBar'
 import { Header } from '@/src/components/Header'
 import { TopicNav } from '@/src/components/TopicNav'
 import { SideBar} from '@/src/components/SideBar'
 import { Footer } from '@/src/components/Footer'
 
+import { GOOGLE_ANALYTICS_ID } from '@/src/constants/siteName'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default async function Layout({ children }: { children: React.ReactNode }){
   return (
     <html lang="ja">
-      {/* TODO FIX */}
-      {/* Google tag (gtag.js)s */}
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGNB55Y3V" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-0EGNB55Y3V');
-        `}
-      </Script>
+      <GoogleAnalytics id={GOOGLE_ANALYTICS_ID}/>
       <body className={inter.className}>
         <NavBar />
         <Header />
