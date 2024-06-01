@@ -4,7 +4,7 @@ import Article from '@/server/types/article'
 import { articleDetailURL } from '@/src/lib/siteMap';
 import Thumbnail from '@/src/app/(article)/_components/Article/Thumbnail';
 import { ArticleTag } from '@/src/app/(article)/_components/Article/ArticleTag';
-import { ArticleCategory } from '@/src/app/(article)/_components/Article/ArticleCategory';
+import { ArticleCategory } from '@/src/app/(article)/_components/Article/Category';
 import PublishedAtComponent from '@/src/app/(article)/_components/Article/PublishedAt';
 
 type Props = { article: Article }

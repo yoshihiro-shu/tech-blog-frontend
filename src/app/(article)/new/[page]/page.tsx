@@ -1,4 +1,4 @@
-import ArticleList from '@/src/app/(article)/_components/Article/ArticleList'
+import ArticleList from '@/src/app/(article)/_components/Article/List'
 import Article from '@/server/types/article';
 import Pager from '@/server/types/pager';
 
