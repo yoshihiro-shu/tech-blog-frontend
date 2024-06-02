@@ -1,9 +1,9 @@
-import APIProvider from '@/server/api/v1';
-import apiClient from '@/server/client';
+import APIProvider from '@/interface/api/v1';
+import apiClient from '@/interface/client';
 
-import Article from '@/server/types/article'
+import Article from '@/interface/types/article'
 import ArticleList from '@/app/(article)/_components/article/List'
-import Pager from '@/server/types/pager';
+import Pager from '@/interface/types/pager';
 
 type TopPageData = {
   articles: Article[],

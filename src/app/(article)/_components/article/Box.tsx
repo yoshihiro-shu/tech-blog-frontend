@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import Article from '@/server/types/article'
+import Article from '@/interface/types/article'
 import { articleDetailURL } from '@/lib/siteMap';
 import Thumbnail from '@/app/(article)/_components/article/Thumbnail';
 import ArticleTag from '@/app/(article)/_components/article/Tag';

@@ -1,7 +1,7 @@
-import Article from '@/server/types/article';
+import Article from '@/interface/types/article';
 import ArticleDetail from '@/app/(article)/_components/article/Detail';
-import apiClient from '@/server/client';
-import APIProvider from '@/server/api/v1';
+import apiClient from '@/interface/client';
+import APIProvider from '@/interface/api/v1';
 
 const Page = async({
     params: { id },

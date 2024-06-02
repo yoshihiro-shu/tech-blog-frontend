@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Category } from "@/server/types/category"
+import { Category } from "@/interface/types/category"
 import { cagtegoryArticlesURL } from "@/lib/siteMap"
 
 type Props = {category: Category}

@@ -1,4 +1,4 @@
-import Article from '@/server/types/article';
+import Article from '@/interface/types/article';
 
 import Title from '@/app/(article)/_components/article/Title';
 import ArticleTag from '@/app/(article)/_components/article/Tag';

@@ -3,7 +3,7 @@ import NormalPager from "@/app/(article)/_components/pager/NormalPager";
 import PrevPager from "@/app/(article)/_components/pager/PrevPager";
 import NextPager from "@/app/(article)/_components/pager/NextPager";
 
-import Pager from "@/server/types/pager";
+import Pager from "@/interface/types/pager";
 
 type Props = {
     pager: Pager,

@@ -1,11 +1,11 @@
 import ArticleList from '@/app/(article)/_components/article/List'
 import ErrorPage from '@/app/_components/error';
 
-import Article from '@/server/types/article';
-import Pager from '@/server/types/pager';
+import Article from '@/interface/types/article';
+import Pager from '@/interface/types/pager';
 
-import apiClient from '@/server/client';
-import APIProvider from '@/server/api/v1';
+import apiClient from '@/interface/client';
+import APIProvider from '@/interface/api/v1';
 
 
 type ArticlesListPage = {

@@ -1,9 +1,9 @@
 import ArticleList from '@/app/(article)/_components/article/List'
-import Article from '@/server/types/article';
-import Pager from '@/server/types/pager';
+import Article from '@/interface/types/article';
+import Pager from '@/interface/types/pager';
 
-import APIProvider from '@/server/api/v1';
-import apiClient from '@/server/client';
+import APIProvider from '@/interface/api/v1';
+import apiClient from '@/interface/client';
 import { newAritclesURL } from '@/lib/siteMap';
 
 

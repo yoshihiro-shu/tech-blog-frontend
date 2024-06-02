@@ -1,5 +1,5 @@
-import Article from '@/server/types/article'
-import Pager from '@/server/types/pager'
+import Article from '@/interface/types/article'
+import Pager from '@/interface/types/pager'
 import ArticleBox from '@/app/(article)/_components/article/Box'
 import Pagination from '@/app/(article)/_components/pager/Pagination'
 

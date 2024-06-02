@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Tag } from "@/server/types/tag"
+import { Tag } from "@/interface/types/tag"
 import { tagArticlesURL } from "@/lib/siteMap"
 
 type Props = {tags: Tag[]}

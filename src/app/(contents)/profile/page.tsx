@@ -1,5 +1,5 @@
-import APIProvider from '@/server/api/v1';
-import apiClient from '@/server/client';
+import APIProvider from '@/interface/api/v1';
+import apiClient from '@/interface/client';
 
 import { StaticPage } from '@/app/(contents)/_components/StaticPage';
 
