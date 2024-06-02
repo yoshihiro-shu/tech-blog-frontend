@@ -1,19 +1,18 @@
-import Link from 'next/link';
-
-import { Tag } from "@/interface/types/tag"
+import { Tag as TagType } from "@/interface/types/tag"
 import { tagArticlesURL } from "@/lib/siteMap"
 
-type Props = {tags: Tag[]}
+import Tag from "@/app/(article)/_components/tag"
+
+type Props = {tags: TagType[]}
 const ArticleTag = ({tags}: Props) => {
     return (
         <p className='flex justify-end'>
             {tags.map((tag) =>
-                <Link
-                className='ml-2'
-                href={tagArticlesURL(tag.slug)}
-                key={tag.id} >
-                    #{tag.name}
-                </Link>
+                <Tag
+                    key={tag.id}
+                    name={tag.name}
+                    link={tagArticlesURL(tag.slug)}
+                />
             )}
         </p>
     )
