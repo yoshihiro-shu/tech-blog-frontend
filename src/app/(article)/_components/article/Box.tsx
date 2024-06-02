@@ -1,25 +1,32 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 import Article from '@/interface/types/article'
 import { articleDetailURL } from '@/lib/siteMap';
-import Thumbnail from '@/app/(article)/_components/article/Thumbnail';
 import ArticleTag from '@/app/(article)/_components/article/Tag';
 import ArticleCategory from '@/app/(article)/_components/article/Category';
 import PublishedAtComponent from '@/app/(article)/_components/article/PublishedAt';
 
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/react";
+
 type Props = { article: Article }
 const ArticleBox = ({ article }: Props) => {
     return (
-        <article className="flex flex-col shadow my-4 border-2 border-indigo-600">
-            <Link href={articleDetailURL(article.id.toString())} className="hover:opacity-75 w-full">
-            <Thumbnail title={article?.title}/>
+        <Card fullWidth shadow='sm'>
+            <Link href={articleDetailURL(article.id.toString())}>
+                <CardHeader className="flex gap-3">
+                    <div className="flex flex-col">
+                        <p className="text-md">{article?.title}</p>
+                    </div>
+                </CardHeader>
+                <CardBody>
+                    <ArticleCategory category={article.category}/>
+                    <PublishedAtComponent date={article.updatedAt} />
+                </CardBody>
+                <CardFooter>
+                    <ArticleTag tags={article.tags} />
+                </CardFooter>
             </Link>
-            <div className="bg-white flex flex-col justify-start p-6 border-t-2 border-indigo-600">
-            <ArticleCategory category={article.category}/>
-            <ArticleTag tags={article.tags} />
-            <PublishedAtComponent date={article.updatedAt} />
-            </div>
-        </article>
+        </Card>
     )
 };
 
