@@ -2,7 +2,6 @@ import './globals.css'
 
 import { Inter } from 'next/font/google'
 import { type Metadata } from "next";
-import { NextUIProvider } from "@nextui-org/react";
 import { ReactNode, Suspense} from 'react';
 
 import Loading from "@/app/loading";
@@ -12,6 +11,8 @@ import { TopicNav } from '@/app/_layout/topic_nav'
 import { Footer } from '@/app/_layout/footer'
 import { GoogleAnalytics } from '@/app/_components/google_analytics'
 import { SITE_NAME, SITE_URL, GOOGLE_ANALYTICS_ID } from '@/constants/siteName';
+
+import { UIProviders } from "./providers";
 
 type Props = {
   children: ReactNode;
@@ -27,7 +28,7 @@ export default function RootLayout({children}: Props) {
     <html lang="ja">
       <GoogleAnalytics id={GOOGLE_ANALYTICS_ID}/>
       <body className={inter.className}>
-        <NextUIProvider>
+        <UIProviders>
           <NavBar />
           <Header />
           <TopicNav />
@@ -35,7 +36,7 @@ export default function RootLayout({children}: Props) {
             {children}
           </Suspense>
           <Footer />
-        </NextUIProvider>
+        </UIProviders>
       </body>
     </html>
   )
