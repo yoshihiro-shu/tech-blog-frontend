@@ -1,8 +1,9 @@
+import './globals.css'
+
 import { Inter } from 'next/font/google'
 import { type Metadata } from "next";
-import {ReactNode} from 'react';
-import { Suspense } from "react";
-import './globals.css'
+import { NextUIProvider } from "@nextui-org/react";
+import { ReactNode, Suspense} from 'react';
 
 import Loading from "@/app/loading";
 import { NavBar } from '@/app/_layout/nav_bar'
@@ -26,13 +27,15 @@ export default function RootLayout({children}: Props) {
     <html lang="ja">
       <GoogleAnalytics id={GOOGLE_ANALYTICS_ID}/>
       <body className={inter.className}>
-        <NavBar />
-        <Header />
-        <TopicNav />
-        <Suspense fallback={<Loading />}>
-          {children}
-        </Suspense>
-        <Footer />
+        <NextUIProvider>
+          <NavBar />
+          <Header />
+          <TopicNav />
+          <Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
+          <Footer />
+        </NextUIProvider>
       </body>
     </html>
   )
