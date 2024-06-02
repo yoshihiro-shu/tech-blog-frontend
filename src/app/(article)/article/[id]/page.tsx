@@ -8,12 +8,13 @@ const Page = async({
   }: {
     params: { id: string }
   }) => {
-  const res = await apiClient.Get<Article>(APIProvider.getArticleDetailApi(id));
-  const article: Article = res.data;
-  if (article === null) {
-    return <div>Article not found</div>
+  let article: Article = {} as Article;
+  try {
+    const res = await apiClient.Get<Article>(APIProvider.getArticleDetailApi(id));
+    article = res.data
+  } catch (error) {
+    console.error('Error fetching article data:', error);
   }
-
   return (
     <ArticleDetail article={article}/>
   )

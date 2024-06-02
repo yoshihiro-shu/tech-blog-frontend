@@ -8,9 +8,15 @@ type ResGetResume = {
 }
 
 const ProfilePage = async () => {
-  const res = await apiClient.Get<ResGetResume>(APIProvider.getResumeApi());
+  let htmlContent = '';
+  try {
+    const res = await apiClient.Get<ResGetResume>(APIProvider.getResumeApi());
+    htmlContent = res.data.htmlContent;
+  } catch (e) {
+    console.error(e);
+  }
   return (
-    <StaticPage content={res.data.htmlContent}/>
+    <StaticPage content={htmlContent}/>
   );
 };
 
