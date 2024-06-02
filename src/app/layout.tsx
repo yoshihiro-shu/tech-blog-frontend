@@ -1,8 +1,10 @@
 import { Inter } from 'next/font/google'
 import { type Metadata } from "next";
 import {ReactNode} from 'react';
+import { Suspense } from "react";
 import './globals.css'
 
+import Loading from "@/app/loading";
 import { NavBar } from '@/app/_layout/nav_bar'
 import { Header } from '@/app/_layout/header'
 import { TopicNav } from '@/app/_layout/topic_nav'
@@ -27,7 +29,9 @@ export default function RootLayout({children}: Props) {
         <NavBar />
         <Header />
         <TopicNav />
+        <Suspense fallback={<Loading />}>
           {children}
+        </Suspense>
         <Footer />
       </body>
     </html>
