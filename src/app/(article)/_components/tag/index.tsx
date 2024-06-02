@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Button } from "@nextui-org/react";
+import { Chip, Link } from "@nextui-org/react";
 
 type Props = {
     name: string,
@@ -8,10 +7,11 @@ type Props = {
 
 const Tag = ({ name, link }: Props) => {
     return (
-        <Link href={link} className='ml-2'>
-            <Button color="primary" variant={'bordered'}>
-                {name}
-            </Button>
+        // <Link href={link} className='ml-2'>
+        <Link href={link}>
+            <Chip color="primary" variant="bordered">
+               #{name}
+            </Chip>
         </Link>
     )
 };
