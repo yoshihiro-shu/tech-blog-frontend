@@ -13,7 +13,7 @@ type Props = {
 }
 const ArticlList = ({ articles, pager, getLink }: Props)  => {
     return (
-        <section className="w-full md:w-3/4 flex flex-col items-center px-3">
+      <>
         {articles.map(article => (
           <>
             <ArticleBox
@@ -27,7 +27,7 @@ const ArticlList = ({ articles, pager, getLink }: Props)  => {
           ))
         }
         { (pager && getLink) && <Pagination pager={pager} getLink={getLink}/>}
-      </section>
+      </>
     )
 }
 
