@@ -9,7 +9,7 @@ import { Markdown } from '@/app/_components/markdown';
 type Props = { article: Article }
 const ArticleDetail = async ({ article }: Props) => {
     return (
-        <article className="flex flex-2 shadow my-4 md:w-3/4">
+        <article className="flex flex-2 shadow">
           {/* <TableOfContents content={article.content} /> */}
           <div className="bg-white p-6 w-full">
             <Title title={article.title} />
