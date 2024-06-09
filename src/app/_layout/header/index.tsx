@@ -9,9 +9,9 @@ export function Header() {
             {SITE_NAME}
           </Link>
           <br/>
-          <p className="text-lg text-gray-600">
+          <div className="text-lg text-gray-600">
             〜 学んだことを随時更新しています。 〜
-          </p>
+          </div>
         </div>
       </header>
     )

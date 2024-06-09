@@ -26,7 +26,10 @@ export const NavBar = () => {
                 {
                   leftNav.map((item) => (
                     <li key={item.name}>
-                      <Link href={item.href} className="hover:text-gray-200 hover:underline px-4">
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="hover:text-gray-200 hover:underline px-4">
                         {item.name}
                       </Link>
                     </li>
@@ -36,16 +39,6 @@ export const NavBar = () => {
             </nav>
 
             <div className="flex items-center text-lg no-underline text-white pr-6">
-              {/* { locale === 'en' && (
-                <Link className="pl-6" href="/ja">
-                  日本語
-                </Link>
-              )}
-              { locale === 'ja' && (
-                <Link className="pl-6" href="/en">
-                  ENGLISH
-                </Link>
-              )} */}
               {ContactFormLink &&
                 <Link className="pl-6" href={ContactFormLink}>
                   お問い合わせ

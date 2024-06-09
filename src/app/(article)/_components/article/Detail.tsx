@@ -1,3 +1,4 @@
+import { Card } from '@nextui-org/react';
 import Article from '@/interface/types/article';
 
 import Title from '@/app/(article)/_components/article/Title';
@@ -11,13 +12,13 @@ const ArticleDetail = async ({ article }: Props) => {
     return (
         <article className="flex flex-2 shadow">
           {/* <TableOfContents content={article.content} /> */}
-          <div className="bg-white p-6 w-full">
+          <Card className="bg-white p-6 w-full">
             <Title title={article.title} />
             <ArticleCategory category={article.category}/>
             <ArticleTag tags={article.tags} />
             <Markdown content={article.content}/>
             <PublishedAt date={article.updatedAt} />
-          </div>
+          </Card>
         </article>
       )
 }

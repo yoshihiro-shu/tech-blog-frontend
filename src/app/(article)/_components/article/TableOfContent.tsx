@@ -17,13 +17,13 @@ const TableOfContents: NextPage<Props> = ({ content }) =>{
           {headings.map((heading, i) => (
             <li key={i} data-depth={heading.depth}>
               <Link
-                key={heading.text}
+                key={i}
                 href={`#${heading.text
                   .replace(/ /g, "-")
                   .replace(/[\/\\^$*+?.()|\[\]{}<>:;"'~,=@`#!%&]/g, "")
                   .toLowerCase()}`}
               >
-                <p>{heading.text}</p>
+                <p key={i}>{heading.text}</p>
               </Link>
             </li>
           ))}
