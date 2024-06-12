@@ -7,7 +7,6 @@ import { ReactNode, Suspense} from 'react';
 import Loading from "@/app/loading";
 import { NavBar } from '@/app/_layout/nav_bar'
 import { Header } from '@/app/_layout/header'
-import { TopicNav } from '@/app/_layout/topic_nav'
 import { Footer } from '@/app/_layout/footer'
 import { GoogleAnalytics } from '@/app/_components/google_analytics'
 import { SITE_NAME, SITE_URL, GOOGLE_ANALYTICS_ID } from '@/constants/siteName';
@@ -31,7 +30,6 @@ export default function RootLayout({children}: Props) {
         <UIProviders>
           <NavBar />
           <Header />
-          <TopicNav />
           <Suspense fallback={<Loading />}>
             {children}
           </Suspense>

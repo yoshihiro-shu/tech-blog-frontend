@@ -1,4 +1,5 @@
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link} from "@nextui-org/react";
+import Link from "next/link";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 
 import { ContactFormLink } from '@/constants/siteName'
 
@@ -21,7 +22,7 @@ export const NavBar = () => {
       <>
             <Navbar className="bg-blue-800 shadow text-white">
               <NavbarBrand>
-                <Link className="font-bold text-inherit">HOME</Link>
+                <Link href="/" className="font-bold text-inherit">HOME</Link>
               </NavbarBrand>
               <NavbarContent className="hidden sm:flex gap-4 text-white" justify="center">
               {

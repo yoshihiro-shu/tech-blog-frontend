@@ -1,4 +1,5 @@
-import { Chip, Link } from "@nextui-org/react";
+import Link from "next/link";
+import { Chip } from "@nextui-org/react";
 
 type Props = {
     name: string,
